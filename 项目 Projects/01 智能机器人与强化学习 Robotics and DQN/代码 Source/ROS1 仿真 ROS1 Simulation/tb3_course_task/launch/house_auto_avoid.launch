@@ -1,0 +1,16 @@
+<launch>
+    <arg name="model" default="waffle_pi" />
+
+    <param name="use_sim_time" value="true" />
+    <env name="TURTLEBOT3_MODEL" value="$(arg model)" />
+
+    <!-- 启动 TurtleBot3 House 仿真环境 -->
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_house.launch" />
+
+    <!-- 启动自己编写的 House 自主行走与避障节点 -->
+    <node
+        pkg="tb3_course_task"
+        type="house_auto_avoid.py"
+        name="house_auto_avoid"
+        output="screen" />
+</launch>

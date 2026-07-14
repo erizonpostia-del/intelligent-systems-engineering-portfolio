@@ -1,66 +1,62 @@
-﻿# Learning-Based Autonomous Systems with ROS and Double Dueling DQN
+# Learning-Based Autonomous Systems with ROS and Double Dueling DQN
 
-# 基于 ROS 与 Double Dueling DQN 的学习型自主系统
+## Overview
 
-## Project Status / 项目状态
+This portfolio project presents verified ROS coursework evidence and a clearly scoped record of a team physical-robot experiment. The public ROS reconstruction contains only selected, sanitized ROS1 simulation materials. Private originals, raw logs, and unredacted media are not included.
 
-Portfolio conversion and evidence audit in progress.
+## Project Scope
 
-正在进行作品集转换与成果证据审计。
+The repository separates two different environments and does not treat them as one deployment:
 
-This project was completed as Intelligent Robotics exchange coursework at Wuhan University.
+- **Personal ROS1 Simulation Environment:** the user's Ubuntu 18.04 virtual machine with ROS Melodic, Gazebo, RViz, `move_base`, and a catkin workspace.
+- **Team-Based Physical TurtleBot Deployment:** a collaborative experiment hosted on a teammate's computer. Its ROS, terminal, Navigation, and RViz environment was not the user's personal VM or PC environment.
 
-本项目完成于武汉大学交换学习期间的智能机器人课程。
+## Part I: ROS1 Simulation
 
-Home academic background: Automation and Systems Engineering.
+The public reconstruction includes the `tb3_course_task` ROS package, paired simulation maps, a reactive LiDAR obstacle-avoidance script, and a multi-waypoint `move_base` action client. The exact independent-versus-course-guided authorship of the scripts remains documented in [Code Attribution.md](文档%20Docs/代码来源与归属%20Code%20Attribution.md).
 
-本科专业背景：自动化与系统工程。
+## Part II: Team-Based Physical TurtleBot Deployment
 
-## Project Overview / 项目概述
+The physical TurtleBot work was completed collaboratively in an environment hosted on a teammate's computer. My substantial contributions included TurtleBot assembly and hardware preparation; network configuration, connection testing and troubleshooting; robot-host communication; mapping-data acquisition and related processing; and key mapping and navigation operations. I do not claim sole ownership of that PC environment or sole implementation of the entire physical workflow. See [Team Physical Deployment.md](文档%20Docs/小组真机贡献%20Team%20Physical%20Deployment.md).
 
-The project connects three technical layers:
+## Part III: Reinforcement Learning
 
-本项目连接三个技术层次：
+**DQN public reconstruction in progress.** No DQN source, model, or result files are included in this public ROS reconstruction.
 
-1. ROS communication and modular robot software / ROS 通信与模块化机器人软件
-2. TurtleBot3 mapping, localization and navigation / TurtleBot3 建图、定位与导航
-3. LiDAR-based learning control using Double Dueling DQN / 基于激光雷达和 Double Dueling DQN 的学习型控制
+## Verified Results
 
-## Currently Verified Results / 当前已核实结果
+- A nine-goal sequence was executed in the ROS1 Gazebo simulation through the `move_base` action interface.
+- The retained terminal evidence records `Goal 1 reached` through `Goal 9 reached` and `World outer loop finished`.
+- The RViz/Gazebo screenshot shows ROS1 simulation integration; it does not independently prove the nine-goal outcome.
 
-- Implemented ROS topic communication and service communication.
-- 完成 ROS 话题通信和服务通信。
+## My Contributions
 
-- Implemented reactive obstacle avoidance using segmented LiDAR readings.
-- 使用分区激光雷达数据实现反应式避障。
+The ROS1 material comes from the personal simulation environment. The physical-robot contribution boundary is team-based and is stated above and in the linked deployment note. No claim is made that the physical system was independently configured or independently completed.
 
-- Implemented multi-waypoint navigation through the move_base action interface.
-- 通过 move_base Action 接口实现多目标点导航。
+## Environment Separation
 
-- Integrated TurtleBot3 mapping, localization and path-planning workflows.
-- 集成 TurtleBot3 建图、定位与路径规划流程。
+Simulation success is not physical-robot success. The public team screenshot shows Navigation2 context only; it does not prove a complete target-submission-to-arrival sequence, autonomous operation, or a user-owned PC environment.
 
-- Trained a Double Dueling DQN agent for 2,000 episodes.
-- 完成 Double Dueling DQN 智能体 2,000 回合训练。
+## Repository Structure
 
-- Achieved score at least 10 in 36 of 50 fixed-seed evaluation episodes.
-- 固定种子 50 局评估中，有 36 局达到不低于 10 分。
+- `代码 Source/ROS1 仿真 ROS1 Simulation/tb3_course_task`: selected ROS1 package files.
+- `配置 Configs/ROS1 仿真 ROS1 Simulation/地图 Maps`: paired public simulation-map copies.
+- `结果 Results/ROS1 仿真 ROS1 Simulation/多目标点导航 Multi-Waypoint Navigation`: verified result summary.
+- `媒体 Media`: selected redacted simulation and team-context evidence.
+- `文档 Docs`: reproduction, attribution, evidence, safety, and build records.
 
-- Recorded a mean score of 26.12 and a maximum score of 171.
-- 平均分为 26.12，最高分为 171。
+## Reproduction
 
-- Conducted three random-seed evaluations with success results of 38 of 50, 35 of 50 and 34 of 50.
-- 完成三组随机种子测试，成功结果分别为 38/50、35/50 和 34/50。
+Only confirmed information is recorded in [Reproduction.md](文档%20Docs/复现说明%20Reproduction.md). Commands not directly confirmed by evidence are marked `TODO: verify exact command` rather than inferred.
 
-## Repository Documents / 项目文档
+## Attribution
 
-- 证据清单 Evidence.md
-- 个人贡献 Contributions.md
-- 实验环境 Environments.md
-- 局限与待办 Limitations.md
+See [Code Attribution.md](文档%20Docs/代码来源与归属%20Code%20Attribution.md). The excluded `beginner_tutorials` package is a ROS foundational exercise and is not presented as a core project deliverable.
 
-## Important Notice / 重要说明
+## Limitations
 
-All technical claims will be reviewed against source code, logs, figures, reports or demonstration media before public release.
+This reconstruction does not include a user-created RViz configuration, physical navigation success log, rosbag, full ROS2 workspace, or a continuous physical goal-to-arrival recording.
 
-所有技术表述在公开前，都将通过源代码、日志、图表、原始报告或演示媒体进行核验。
+## Current Status
+
+The ROS1 public reconstruction was prepared from selected evidence on 2026-07-14. No Git staging, commit, or push operation was performed.

@@ -1,75 +1,58 @@
-﻿# Individual Contributions
+# Individual Contributions / 个人贡献说明
 
-# 个人贡献说明
+Last audit / 最近审计：2026-07-13
 
-## Contribution Labels / 贡献标签
+Evidence confirms that work products and experiment records exist; it does not by itself establish who authored each file. Until the user confirms provenance, contribution labels remain conservative.
 
-- Independently implemented / 独立实现
-- Implemented with course guidance / 在课程指导下实现
-- Modified from an official example / 基于官方示例修改
-- Integrated open-source components / 集成开源组件
-- Conducted and evaluated / 完成实验与评估
-- Team contribution / 团队贡献
-- To be confirmed / 待确认
+## ROS communication
 
-## ROS Communication / ROS 通信
+| Component | Evidence status | Current contribution label | Boundary |
+|---|---|---|---|
+| Publisher/subscriber | Complete source and runtime screenshots found | To be confirmed | `beginner_tutorials` is a canonical ROS tutorial/course exercise; do not present it as novel work |
+| AddTwoInts service/client | Complete source/interface and runtime screenshot found | To be confirmed | Same tutorial/course provenance boundary |
+| Package metadata | `package.xml` and `CMakeLists.txt` found | Course/basic exercise context | Metadata contains a local maintainer identifier but that is not proof of sole authorship |
 
-### Publisher and Subscriber
+## TurtleBot3 navigation
 
-- Status / 状态：待填写
-- My contribution / 个人贡献：
-- External source or template / 外部来源或模板：
-- File location / 文件位置：
+### Reactive obstacle avoidance
 
-### Service and Client
+- Evidence: complete `house_auto_avoid.py`, launch file, runtime logs and Gazebo screenshots.
+- Existing components integrated: ROS1, `sensor_msgs/LaserScan`, `geometry_msgs/Twist`, TurtleBot3 Gazebo house world.
+- Current contribution label: To be confirmed.
+- Required confirmation: independently written, written with course guidance, or adapted from a template/example.
 
-- Status / 状态：待填写
-- My contribution / 个人贡献：
-- External source or template / 外部来源或模板：
-- File location / 文件位置：
+### Multi-waypoint navigation
 
-## TurtleBot3 Navigation / TurtleBot3 导航
+- Evidence: complete `world_outer_loop.py`, raw log with two complete nine-goal successes, and correct terminal screenshot.
+- Existing components integrated: ROS1 actionlib, `move_base`, `move_base_msgs`, TF quaternion conversion, AMCL/costmaps/planner.
+- Current contribution label: To be confirmed.
+- Verified result boundary: nine-goal completion in ROS1/Gazebo simulation, not physical-robot completion.
 
-### Reactive Obstacle Avoidance
+### Team-based physical TurtleBot deployment
 
-- Status / 状态：待填写
-- My contribution / 个人贡献：
-- Existing packages used / 使用的现有软件包：
-- File location / 文件位置：
+- Project form and environment: collaborative physical-robot work in a ROS/terminal environment hosted on a teammate's computer, separate from the user's personal ROS1 Ubuntu virtual machine.
+- Substantial contributions: TurtleBot assembly and hardware preparation; network configuration, connection testing, and troubleshooting; robot-host communication setup; mapping-data acquisition and related processing; and key mapping and navigation operations during the team experiments.
+- Evidence: ROS2 topic/communication/mapping/localization/path screenshots and a visually verified 51.77-second robot/Nav2 video.
+- Attribution boundary: these records support the team's physical-robot experiment and the user's stated substantial contributions. They do not establish that the user independently configured the teammate-hosted PC environment or solely implemented the complete physical navigation workflow.
+- Verified result boundary: entity robot and Navigation2 activity are shown; continuous goal submission through explicit arrival is not shown.
 
-### Multi-Waypoint Navigation
+## Official/configuration components
 
-- Status / 状态：待填写
-- My contribution / 个人贡献：
-- Existing packages used / 使用的现有软件包：
-- File location / 文件位置：
+- The 23 recovered `.rviz` files are official installed ROS1 package configurations.
+- They may be described as integrated/used environment components only.
+- They must not be listed as individually authored deliverables.
 
-### Physical Robot Deployment
+## Reinforcement learning
 
-- Status / 状态：待填写
-- My contribution / 个人贡献：
-- Work completed by teammates or instructors / 他人完成部分：
-- Evidence / 证据：
+| Component | Evidence status | Current contribution label | Needed confirmation |
+|---|---|---|---|
+| DQN network and training code | Complete code/material set found | To be confirmed | Starter-code and reference provenance |
+| Observation processing | 180-D LiDAR, four-frame stack and 884-D final input recorded | To be confirmed | Exact added feature dimensions and author |
+| Training/evaluation | Structured results and figures found | Conducted/evaluated, pending confirmation | Individual vs team role and evaluation design |
 
-## Reinforcement Learning / 强化学习
+## User confirmations still required
 
-### DQN Network
-
-- Status / 状态：待填写
-- My contribution / 个人贡献：
-- Starter code or references / 初始代码或参考来源：
-- File location / 文件位置：
-
-### Observation Processing
-
-- Status / 状态：待填写
-- My contribution / 个人贡献：
-- Added feature dimensions / 新增特征维度：
-- File location / 文件位置：
-
-### Training and Evaluation
-
-- Status / 状态：待填写
-- My contribution / 个人贡献：
-- Evaluation design / 评估设计：
-- File location / 文件位置：
+1. Authorship category for `world_outer_loop.py` and `house_auto_avoid.py`.
+2. Whether all `beginner_tutorials` files are course/ROS tutorial exercises.
+3. Physical-robot role split beyond the confirmed substantial contributions listed above, if a more granular breakdown is needed.
+4. Starter-code/reference provenance and personal changes in the DQN implementation.
