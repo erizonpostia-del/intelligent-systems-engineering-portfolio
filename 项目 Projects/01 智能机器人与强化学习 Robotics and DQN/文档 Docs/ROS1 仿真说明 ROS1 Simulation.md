@@ -6,7 +6,7 @@ This material was recovered from the user's personal Ubuntu 18.04 virtual machin
 
 ## Public scope
 
-The public package contains selected `tb3_course_task` files only. `beginner_tutorials`, installed-package RViz configurations, raw logs, build outputs, and private environment artifacts are excluded.
+The public package contains selected `tb3_course_task` files only. The paired ROS1 maps are course-provided simulation resources, not a personal mapping deliverable. `beginner_tutorials`, installed-package RViz configurations, raw logs, build outputs, and private environment artifacts are excluded.
 
 ## Included functions
 
@@ -14,6 +14,10 @@ The public package contains selected `tb3_course_task` files only. `beginner_tut
 - `world_outer_loop.py` sends nine `move_base` action goals and records a success/failure result for each goal.
 - `house_auto_avoid.launch` starts the TurtleBot3 House Gazebo world and the obstacle-avoidance node.
 
-## Result boundary
+## Verified Result Boundary
 
 The available terminal evidence verifies a nine-goal sequence in Gazebo simulation. It is not evidence of a physical TurtleBot completing the same sequence.
+
+## Known Limitations
+
+The original full workspace, build command, launch invocation, and custom RViz configuration were not recovered. These omissions do not change the verified ROS1 simulation result.

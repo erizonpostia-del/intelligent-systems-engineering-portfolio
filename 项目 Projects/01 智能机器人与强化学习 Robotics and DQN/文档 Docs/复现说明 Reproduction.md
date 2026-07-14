@@ -23,17 +23,15 @@ rosrun tb3_course_task world_outer_loop.py
 
 It records connection to `move_base`, nine successful goals, and completion of the outer loop.
 
-## Commands requiring confirmation
+## Known Reproduction Limitations
 
-```text
-TODO: verify exact workspace build command.
-TODO: verify exact launch command for house_auto_avoid.launch.
-TODO: verify exact map-server launch and map-loading command.
-TODO: verify required executable permissions for the recovered Python scripts.
-```
+- **Not recovered:** the original workspace build command; no reliable recollection is available to support a specific command claim.
+- **Not independently verified:** the original command used to invoke `house_auto_avoid.launch`.
+- **Not recovered:** the original map-server launch and map-loading command.
+- **Not recovered:** the executable-permission state of the recovered Python scripts.
 
-The standard command form must not be treated as a record of the original setup unless independently verified. This repository intentionally does not fabricate a `requirements.txt`, rosbag, environment file, or custom RViz configuration.
+These details are not stated as reproduction steps. This repository does not fabricate a `requirements.txt`, rosbag, environment file, or custom RViz configuration.
 
 ## Maps
 
-The two public PGM/YAML pairs are verified ROS1 simulation map artifacts. Their public YAML copies use relative image paths; the private source files were not modified.
+The two public PGM/YAML pairs are course/example-provided ROS1 simulation resources. Their public YAML copies use relative image paths; the private source files were not modified. They are not presented as personal mapping output.

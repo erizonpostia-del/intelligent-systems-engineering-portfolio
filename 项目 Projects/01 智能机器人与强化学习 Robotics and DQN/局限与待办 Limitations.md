@@ -1,6 +1,6 @@
-# Limitations and Pending Work / 局限与待办
+# Known Limitations and Evidence Boundaries / 已知局限与证据边界
 
-Last audit / 最近审计：2026-07-13
+Last audit / 最近审计：2026-07-14
 
 ## Resolved evidence gaps / 已解决
 
@@ -13,10 +13,11 @@ Last audit / 最近审计：2026-07-13
 
 ## Remaining limitations / 仍存局限
 
-- The physical video shows the robot and Navigation2/RViz in alternating shots, but not a continuous target-submission-to-arrival sequence.
+- The physical video includes manual teleoperation and a user-confirmed RViz goal-directed movement demonstration, but the current public evidence does not provide a continuous, independently verifiable target-selection-to-arrival trace.
 - Physical screenshots and video document team experiment activity, not the user's independent configuration or ownership of the teammate-hosted PC/ROS environment.
-- No physical-navigation success log was found.
-- The exact ROS2 distribution, Ubuntu version, TurtleBot3 variant and original ROS2 workspace are unknown.
+- No physical-navigation success log was recovered in the current evidence set.
+- The team environment used Ubuntu 22.04, ROS2 Humble, TurtleBot3 Burger, and Cartographer (user-confirmed). The original ROS2 workspace has not yet been incorporated; a team-held archive has been reported.
+- Physical enclosed-space obstacle avoidance is user-reported but is not claimed because no video or log was recovered.
 - No rosbag was found.
 - No original `requirements.txt` or `environment.yml` was found.
 - No user-created or confirmed modified RViz configuration was found. The 23 recovered files are official installed-package configs.
@@ -28,13 +29,13 @@ Last audit / 最近审计：2026-07-13
 
 The file previously copied under a descriptive “nine-goal completed” name is hash-identical to `5f0365f7-55d8-4f18-a45a-182a29c53c94.png`. It shows RViz/Gazebo integration but no Goal 1–9 terminal results. The actual completion screenshot is `b112b2a6-8876-4ca8-aab0-1aac62d1dc21.png`.
 
-## Priority work / 优先待办
+## Evidence Status Summary
 
-1. Confirm ROS2 OS/distribution, robot model and whether the physical video is autonomous rather than teleoperated, if the teammate-hosted environment remains accessible.
-2. Confirm authorship and source/template provenance for `world_outer_loop.py`, `house_auto_avoid.py` and `beginner_tutorials`.
-3. Locate the ROS2 workspace, launch/config, logs or a continuous goal-to-arrival video in the teammate-hosted team environment, if the group wishes to provide further team-level evidence.
-4. Prepare redacted public derivatives of selected maps, screenshots and video; keep private originals unchanged.
-5. Explain the DQN 884-dimensional input composition and contribution boundary.
+- **Not recovered:** physical-navigation success log and physical enclosed-space obstacle-avoidance recording.
+- **Not independently verified:** a continuous physical RViz target-selection-to-arrival trace.
+- **Not claimed:** a complete end-to-end autonomous physical navigation mission or physical obstacle-avoidance outcome.
+- **Not claimed:** complete physical goal-to-arrival navigation, ownership of the teammate-hosted PC environment, a custom RViz configuration, or a novel SLAM/navigation algorithm.
+- **Outside the current public scope:** DQN input-composition and contribution-boundary documentation.
 
 ## Claim control / 表述控制
 

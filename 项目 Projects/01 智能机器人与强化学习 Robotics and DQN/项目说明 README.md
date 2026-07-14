@@ -13,7 +13,7 @@ The repository separates two different environments and does not treat them as o
 
 ## Part I: ROS1 Simulation
 
-The public reconstruction includes the `tb3_course_task` ROS package, paired simulation maps, a reactive LiDAR obstacle-avoidance script, and a multi-waypoint `move_base` action client. The exact independent-versus-course-guided authorship of the scripts remains documented in [Code Attribution.md](文档%20Docs/代码来源与归属%20Code%20Attribution.md).
+The public reconstruction includes the `tb3_course_task` ROS package, course-provided simulation maps, a reactive LiDAR obstacle-avoidance script, and a multi-waypoint `move_base` action client. `house_auto_avoid.py` was independently implemented, its launch file was independently modified, and `world_outer_loop.py` was independently implemented with course guidance. Their source boundaries are recorded in [Code Attribution.md](文档%20Docs/代码来源与归属%20Code%20Attribution.md).
 
 ## Part II: Team-Based Physical TurtleBot Deployment
 
@@ -21,7 +21,7 @@ The physical TurtleBot work was completed collaboratively in an environment host
 
 ## Part III: Reinforcement Learning
 
-**DQN public reconstruction in progress.** No DQN source, model, or result files are included in this public ROS reconstruction.
+Double Dueling DQN materials are outside the current public scope. No DQN source, model, or result files are included in this ROS reconstruction.
 
 ## Verified Results
 
@@ -35,7 +35,7 @@ The ROS1 material comes from the personal simulation environment. The physical-r
 
 ## Environment Separation
 
-Simulation success is not physical-robot success. The public team screenshot shows Navigation2 context only; it does not prove a complete target-submission-to-arrival sequence, autonomous operation, or a user-owned PC environment.
+Simulation success is not physical-robot success. The team experiment included manual teleoperation and RViz goal-directed movement in the real environment. The current public evidence does not provide a continuous, independently verifiable target-selection-to-arrival trace and does not establish a user-owned PC environment.
 
 ## Repository Structure
 
@@ -47,15 +47,15 @@ Simulation success is not physical-robot success. The public team screenshot sho
 
 ## Reproduction
 
-Only confirmed information is recorded in [Reproduction.md](文档%20Docs/复现说明%20Reproduction.md). Commands not directly confirmed by evidence are marked `TODO: verify exact command` rather than inferred.
+Only evidence-backed information is recorded in [Reproduction.md](文档%20Docs/复现说明%20Reproduction.md). Original commands not recovered from evidence are not stated.
 
 ## Attribution
 
-See [Code Attribution.md](文档%20Docs/代码来源与归属%20Code%20Attribution.md). The excluded `beginner_tutorials` package is a ROS foundational exercise and is not presented as a core project deliverable.
+See [Code Attribution.md](文档%20Docs/代码来源与归属%20Code%20Attribution.md). The excluded `beginner_tutorials` package was completed by the user as ROS foundational coursework and is not presented as a core project deliverable.
 
-## Limitations
+## Known Limitations
 
-This reconstruction does not include a user-created RViz configuration, physical navigation success log, rosbag, full ROS2 workspace, or a continuous physical goal-to-arrival recording.
+This reconstruction does not include a user-created RViz configuration, physical navigation success log, rosbag, full ROS2 workspace, or a continuous physical goal-to-arrival recording. Physical enclosed-space obstacle avoidance is not claimed because no video or log was recovered.
 
 ## Current Status
 

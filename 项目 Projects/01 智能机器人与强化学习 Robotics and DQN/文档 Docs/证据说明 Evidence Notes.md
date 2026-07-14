@@ -7,8 +7,8 @@
 
 ## Team physical media
 
-- `team_nav2_context_redacted.png` is a team-based Navigation2/RViz context screenshot from an environment hosted on a teammate's computer. It shows active navigation/localization context but no robot body, goal submission, or unambiguous physical arrival.
+- `team_nav2_context_redacted.png` is a team-based Navigation2/RViz context screenshot from an environment hosted on a teammate's computer. It shows navigation/localization context but no robot body or continuous target-selection-to-arrival trace.
 
 ## Excluded evidence
 
-Raw logs, unredacted screenshots, physical mapping screenshots, and the physical-robot video remain private. The video alternates robot and monitor shots and does not continuously record target submission through arrival.
+Raw logs, unredacted screenshots, physical mapping screenshots, and the physical-robot video remain private. The team reports that the video documents manual teleoperation and RViz goal-directed movement; the currently released public evidence does not independently verify a continuous target-selection-to-arrival sequence.

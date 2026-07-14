@@ -22,33 +22,35 @@ This was the user's personal Ubuntu virtual machine for individual course experi
 ## Environment B: Team-Based Physical TurtleBot Environment / 小组 TurtleBot 真机环境
 
 - ROS generation: ROS2
+- OS: Ubuntu 22.04 (user-confirmed)
+- ROS2 distribution: Humble (user-confirmed)
 - Navigation: Navigation2
 - Localization: AMCL/Navigation2 localization state visible
+- Mapping stack: Cartographer (user-confirmed)
 - Project form: collaborative physical-robot experiment hosted on a teammate's computer
 - Physical evidence: entity TurtleBot3 appears in a 51.77-second video; Navigation2/RViz appears in alternating shots
-- OS: unknown
-- ROS2 distribution: unknown
-- Robot model: TurtleBot3, exact variant unknown
-- Original ROS2 workspace/configuration: not recovered
-- Navigation success boundary: target submission and explicit arrival are not continuously recorded
+- Robot model: TurtleBot3 Burger (user-confirmed)
+- Original ROS2 workspace/configuration: not recovered in the current evidence set; a team-held archive has been reported but is not yet incorporated
+- Navigation evidence boundary: manual teleoperation and RViz goal-directed movement were both used in the team experiment. The available public evidence does not provide a continuous, independently verifiable target-selection-to-arrival trace.
+
 
 The physical TurtleBot mapping and navigation experiments were completed collaboratively in a separate team environment hosted on a teammate's computer. This PC/ROS environment is distinct from the user's personal ROS1 Ubuntu virtual machine and must not be described as an environment maintained solely by the user. The screenshots and mapping outputs evidence the team's physical-robot work, not an independently configured personal PC environment.
 
 ## Environment C: Double Dueling DQN
 
-- Deep-learning framework: PyTorch; exact version pending confirmation
+- Deep-learning framework: PyTorch; exact version not recovered
 - Environment: FlappyBird-v0
 - Raw observation: 180-dimensional LiDAR
 - Frame stack: 4
 - Final observation dimension: 884
 - Training episodes: 2000
-- OS/Python/device: pending confirmation in the public audit documents
+- OS/Python/device: not recovered in the public audit record
 
-## Missing environment artifacts
+## Not Recovered Environment Artifacts
 
-- ROS1/ROS2 rosbag: Missing
-- Original `requirements.txt`: Missing
-- Original `environment.yml` / `environment.yaml`: Missing
-- User-created RViz config: Missing
-- Official ROS1 RViz package configs: Found (23), attributed to installed packages
-- Complete ROS2 environment snapshot/workspace: Missing
+- ROS1/ROS2 rosbag: Not recovered
+- Original `requirements.txt`: Not recovered
+- Original `environment.yml` / `environment.yaml`: Not recovered
+- User-created RViz config: Not recovered
+- Official ROS1 RViz package configs: Report only (23), attributed to installed packages
+- Complete ROS2 environment snapshot/workspace: Not recovered

@@ -18,6 +18,6 @@ A nine-goal navigation sequence was executed in the ROS1 Gazebo simulation using
 
 `媒体 Media/ROS1 仿真 ROS1 Simulation/ros1_nine_goal_terminal_evidence_redacted.png` preserves the `Goal 1 reached` through `Goal 9 reached` lines and `World outer loop finished`.
 
-## Limitations
+## Known Limitations
 
 This is not a claim of a new planning algorithm, a full-scene generalisation result, a physical nine-point navigation result, or a complete autonomous physical-robot system.
