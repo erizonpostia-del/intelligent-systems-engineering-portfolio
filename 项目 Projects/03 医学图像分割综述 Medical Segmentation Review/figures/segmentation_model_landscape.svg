@@ -1,12 +1,228 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
-  <title id="title">Medical segmentation model landscape</title><desc id="desc">An original conceptual progression from task-specific segmentation to medical adaptation.</desc>
-  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1f3b59"/></marker></defs>
-  <rect width="1200" height="420" fill="#f7fafc"/><text x="70" y="65" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#102a43">A changing segmentation workflow</text>
-  <text x="70" y="98" font-family="Arial, sans-serif" font-size="16" fill="#486581">Conceptual landscape — not a performance ranking</text>
-  <g font-family="Arial, sans-serif"><rect x="65" y="160" width="180" height="130" rx="16" fill="#d9eaf7" stroke="#2b6b92" stroke-width="2"/><text x="155" y="205" text-anchor="middle" font-size="21" font-weight="700" fill="#12344d">Task-specific</text><text x="155" y="233" text-anchor="middle" font-size="18" fill="#243b53">U-Net</text><text x="155" y="258" text-anchor="middle" font-size="14" fill="#486581">data + labels define task</text>
-  <line x1="255" y1="225" x2="320" y2="225" stroke="#1f3b59" stroke-width="3" marker-end="url(#arrow)"/><rect x="330" y="160" width="180" height="130" rx="16" fill="#dff3ea" stroke="#23835b" stroke-width="2"/><text x="420" y="205" text-anchor="middle" font-size="21" font-weight="700" fill="#164e36">Automated setup</text><text x="420" y="233" text-anchor="middle" font-size="18" fill="#164e36">nnU-Net</text><text x="420" y="258" text-anchor="middle" font-size="14" fill="#486581">configuration follows data</text>
-  <line x1="520" y1="225" x2="585" y2="225" stroke="#1f3b59" stroke-width="3" marker-end="url(#arrow)"/><rect x="595" y="160" width="180" height="130" rx="16" fill="#f8edcf" stroke="#b7791f" stroke-width="2"/><text x="685" y="205" text-anchor="middle" font-size="21" font-weight="700" fill="#744210">Transformer</text><text x="685" y="233" text-anchor="middle" font-size="18" fill="#744210">TransUNet</text><text x="685" y="258" text-anchor="middle" font-size="14" fill="#486581">global + local context</text>
-  <line x1="785" y1="225" x2="850" y2="225" stroke="#1f3b59" stroke-width="3" marker-end="url(#arrow)"/><rect x="860" y="160" width="180" height="130" rx="16" fill="#eadcf8" stroke="#805ad5" stroke-width="2"/><text x="950" y="205" text-anchor="middle" font-size="21" font-weight="700" fill="#553c9a">Foundation model</text><text x="950" y="233" text-anchor="middle" font-size="18" fill="#553c9a">SAM</text><text x="950" y="258" text-anchor="middle" font-size="14" fill="#486581">prompt specifies target</text>
-  <line x1="1050" y1="225" x2="1115" y2="225" stroke="#1f3b59" stroke-width="3" marker-end="url(#arrow)"/><text x="1125" y="205" font-size="18" font-weight="700" fill="#102a43">Medical</text><text x="1125" y="231" font-size="18" font-weight="700" fill="#102a43">adaptation</text><text x="1125" y="257" font-size="14" fill="#486581">SAM-Path · MedSAM</text></g>
-  <text x="70" y="360" font-family="Arial, sans-serif" font-size="15" fill="#627d98">Each step changes the modeling workflow; none supplies a universal cross-dataset ranking.</text>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="518.4pt" height="267.84pt" viewBox="0 0 518.4 267.84" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-16T11:52:42.690224</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 267.84
+L 518.4 267.84
+L 518.4 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 40.9536 130.70592
+L 124.9344 130.70592
+Q 136.3392 130.70592 136.3392 124.81344
+L 136.3392 81.42336
+Q 136.3392 75.53088 124.9344 75.53088
+L 40.9536 75.53088
+Q 29.5488 75.53088 29.5488 81.42336
+L 29.5488 124.81344
+Q 29.5488 130.70592 40.9536 130.70592
+z
+" clip-path="url(#paaa726fa9d)" style="fill: #eaf2f8; stroke: #2d6a94; stroke-width: 1.35; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 157.5936 130.70592
+L 241.5744 130.70592
+Q 252.9792 130.70592 252.9792 124.81344
+L 252.9792 81.42336
+Q 252.9792 75.53088 241.5744 75.53088
+L 157.5936 75.53088
+Q 146.1888 75.53088 146.1888 81.42336
+L 146.1888 124.81344
+Q 146.1888 130.70592 157.5936 130.70592
+z
+" clip-path="url(#paaa726fa9d)" style="fill: #e8f4ed; stroke: #3e8b63; stroke-width: 1.35; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 274.2336 130.70592
+L 358.2144 130.70592
+Q 369.6192 130.70592 369.6192 124.81344
+L 369.6192 81.42336
+Q 369.6192 75.53088 358.2144 75.53088
+L 274.2336 75.53088
+Q 262.8288 75.53088 262.8288 81.42336
+L 262.8288 124.81344
+Q 262.8288 130.70592 274.2336 130.70592
+z
+" clip-path="url(#paaa726fa9d)" style="fill: #fff5d8; stroke: #b67a22; stroke-width: 1.35; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 390.8736 130.70592
+L 474.8544 130.70592
+Q 486.2592 130.70592 486.2592 124.81344
+L 486.2592 81.42336
+Q 486.2592 75.53088 474.8544 75.53088
+L 390.8736 75.53088
+Q 379.4688 75.53088 379.4688 81.42336
+L 379.4688 124.81344
+Q 379.4688 130.70592 390.8736 130.70592
+z
+" clip-path="url(#paaa726fa9d)" style="fill: #f0eaf8; stroke: #7b5cc8; stroke-width: 1.35; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 133.7472 103.1184
+Q 138.9312 103.1184 142.270444 103.1184
+" clip-path="url(#paaa726fa9d)" style="fill: none; stroke: #476682; stroke-width: 1.65; stroke-linecap: round"/>
+    <path d="M 136.270444 100.1184
+L 142.270444 103.1184
+L 136.270444 106.1184
+z
+" clip-path="url(#paaa726fa9d)" style="fill: #476682; stroke: #476682; stroke-width: 1.65; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 250.3872 103.1184
+Q 255.5712 103.1184 258.910444 103.1184
+" clip-path="url(#paaa726fa9d)" style="fill: none; stroke: #476682; stroke-width: 1.65; stroke-linecap: round"/>
+    <path d="M 252.910444 100.1184
+L 258.910444 103.1184
+L 252.910444 106.1184
+z
+" clip-path="url(#paaa726fa9d)" style="fill: #476682; stroke: #476682; stroke-width: 1.65; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 367.0272 103.1184
+Q 372.2112 103.1184 375.550444 103.1184
+" clip-path="url(#paaa726fa9d)" style="fill: none; stroke: #476682; stroke-width: 1.65; stroke-linecap: round"/>
+    <path d="M 369.550444 100.1184
+L 375.550444 103.1184
+L 369.550444 106.1184
+z
+" clip-path="url(#paaa726fa9d)" style="fill: #476682; stroke: #476682; stroke-width: 1.65; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 40.9536 221.77152
+L 477.4464 221.77152
+Q 488.8512 221.77152 488.8512 215.87904
+L 488.8512 188.55936
+Q 488.8512 182.66688 477.4464 182.66688
+L 40.9536 182.66688
+Q 29.5488 182.66688 29.5488 188.55936
+L 29.5488 215.87904
+Q 29.5488 221.77152 40.9536 221.77152
+z
+" clip-path="url(#paaa726fa9d)" style="fill: #f8fafc; stroke: #c8d5e2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 432.864 129.9024
+Q 432.864 157.356 432.864 182.964844
+" clip-path="url(#paaa726fa9d)" style="fill: none; stroke: #7b5cc8; stroke-width: 1.65; stroke-linecap: round"/>
+    <path d="M 435.864 176.964844
+L 432.864 182.964844
+L 429.864 176.964844
+z
+" clip-path="url(#paaa726fa9d)" style="fill: #7b5cc8; stroke: #7b5cc8; stroke-width: 1.65; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 66.8736 211.5936
+L 218.2464 211.5936
+Q 229.6512 211.5936 229.6512 205.70112
+L 229.6512 198.46944
+Q 229.6512 192.57696 218.2464 192.57696
+L 66.8736 192.57696
+Q 55.4688 192.57696 55.4688 198.46944
+L 55.4688 205.70112
+Q 55.4688 211.5936 66.8736 211.5936
+z
+" clip-path="url(#paaa726fa9d)" style="fill: #f9e8ee; stroke: #c8829a; stroke-width: 0.95; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 300.1536 211.5936
+L 451.5264 211.5936
+Q 462.9312 211.5936 462.9312 205.70112
+L 462.9312 198.46944
+Q 462.9312 192.57696 451.5264 192.57696
+L 300.1536 192.57696
+Q 288.7488 192.57696 288.7488 198.46944
+L 288.7488 205.70112
+Q 288.7488 211.5936 300.1536 211.5936
+z
+" clip-path="url(#paaa726fa9d)" style="fill: #eaf2f8; stroke: #2d6a94; stroke-width: 0.95; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 33.696 46.872
+L 484.704 46.872
+" clip-path="url(#paaa726fa9d)" style="fill: none; stroke: #d8e1ea; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #17324d" x="33.696" y="26.085227" transform="rotate(-0 33.696 26.085227)">A changing segmentation workflow</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #53718f" x="33.696" y="38.358024" transform="rotate(-0 33.696 38.358024)">A conceptual lineage: each step changes the workflow, not a universal performance ranking.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 9.6px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #17324d" transform="translate(52.8885 94.786353)">Task-specific</text>
+    <text style="font-weight: 700; font-size: 9.6px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #17324d" transform="translate(51.74175 105.476103)">segmentation</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7.1px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(73.674063 113.683487)">U-Net</text>
+    <text style="font-size: 7.1px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(54.42918 124.013085)">Task data + labels</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 9.6px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #17324d" transform="translate(174.519 95.618853)">Automated</text>
+    <text style="font-weight: 700; font-size: 9.6px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #17324d" transform="translate(168.92325 105.534603)">configuration</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 7.1px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(186.365797 113.683487)">nnU-Net</text>
+    <text style="font-size: 7.1px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(168.012297 123.349124)">Data-aware pipeline</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 9.6px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #17324d" transform="translate(288.2145 95.677353)">Transformer</text>
+    <text style="font-weight: 700; font-size: 9.6px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #17324d" transform="translate(285.02175 105.476103)">segmentation</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 7.1px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(299.193984 113.683487)">TransUNet</text>
+    <text style="font-size: 7.1px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(282.185047 124.054687)">Global + local context</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 9.6px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #17324d" transform="translate(406.46025 94.727853)">Promptable</text>
+    <text style="font-weight: 700; font-size: 9.6px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #17324d" transform="translate(392.60625 106.488603)">foundation model</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7.1px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(425.171039 113.726752)">SAM</text>
+    <text style="font-size: 7.1px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(396.561922 123.350788)">Prompt specifies target</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 11.8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #17324d" x="33.696" y="159.3648" transform="rotate(-0 33.696 159.3648)">Medical adaptation</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 7.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #53718f" x="33.696" y="170.0784" transform="rotate(-0 33.696 170.0784)">Different medical tasks require explicit adaptation and evaluation choices.</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 6.9px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #17324d" x="142.56" y="203.870857" transform="rotate(-0 142.56 203.870857)">Pathology semantic segmentation · SAM-Path</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 6.9px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #17324d" x="375.84" y="203.870857" transform="rotate(-0 375.84 203.870857)">Multi-modal medical segmentation · MedSAM</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #53718f" x="33.696" y="251.006167" transform="rotate(-0 33.696 251.006167)">Interpret each model within its task, prompt protocol, data distribution, and evaluation design.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="paaa726fa9d">
+   <rect x="0" y="0" width="518.4" height="267.84"/>
+  </clipPath>
+ </defs>
 </svg>

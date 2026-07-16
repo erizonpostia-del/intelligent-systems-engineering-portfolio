@@ -1,9 +1,215 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
- <title id="title">SAM to medical adaptation map</title><desc id="desc">Original conceptual map showing natural-image pretraining, domain shift, adaptation choices, and medical application contexts.</desc><defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334e68"/></marker></defs>
- <rect width="1200" height="500" fill="#fbfcfe"/><text x="70" y="65" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#102a43">From natural-image pretraining to medical use</text><text x="70" y="96" font-family="Arial, sans-serif" font-size="16" fill="#486581">Original concept map: adaptation choice follows task, data access, and evaluation design</text>
- <g font-family="Arial, sans-serif"><rect x="70" y="175" width="220" height="155" rx="18" fill="#e4eef7" stroke="#2b6b92" stroke-width="2"/><text x="180" y="220" text-anchor="middle" font-size="22" font-weight="700" fill="#12344d">Natural-image</text><text x="180" y="248" text-anchor="middle" font-size="22" font-weight="700" fill="#12344d">pretraining</text><text x="180" y="280" text-anchor="middle" font-size="15" fill="#486581">SAM representation + prompts</text>
- <line x1="300" y1="253" x2="405" y2="253" stroke="#334e68" stroke-width="3" marker-end="url(#a)"/><rect x="415" y="150" width="260" height="205" rx="18" fill="#fff3cd" stroke="#b7791f" stroke-width="2"/><text x="545" y="195" text-anchor="middle" font-size="23" font-weight="700" fill="#744210">Domain shift</text><text x="545" y="230" text-anchor="middle" font-size="15" fill="#744210">modality · scale · 2D/3D</text><text x="545" y="257" text-anchor="middle" font-size="15" fill="#744210">contrast · scanner/stain</text><text x="545" y="284" text-anchor="middle" font-size="15" fill="#744210">annotation ambiguity</text>
- <line x1="685" y1="253" x2="765" y2="253" stroke="#334e68" stroke-width="3" marker-end="url(#a)"/><rect x="775" y="115" width="235" height="275" rx="18" fill="#e8ddf8" stroke="#805ad5" stroke-width="2"/><text x="893" y="158" text-anchor="middle" font-size="22" font-weight="700" fill="#553c9a">Response options</text><text x="893" y="200" text-anchor="middle" font-size="16" fill="#553c9a">prompt design</text><text x="893" y="232" text-anchor="middle" font-size="16" fill="#553c9a">full fine-tuning</text><text x="893" y="264" text-anchor="middle" font-size="16" fill="#553c9a">adapters / prompts</text><text x="893" y="296" text-anchor="middle" font-size="16" fill="#553c9a">domain adaptation</text><text x="893" y="328" text-anchor="middle" font-size="16" fill="#553c9a">domain generalization</text>
- <line x1="1020" y1="253" x2="1090" y2="253" stroke="#334e68" stroke-width="3" marker-end="url(#a)"/><text x="1100" y="211" font-size="19" font-weight="700" fill="#102a43">Use contexts</text><text x="1100" y="243" font-size="15" fill="#486581">digital pathology</text><text x="1100" y="269" font-size="15" fill="#486581">radiology</text><text x="1100" y="295" font-size="15" fill="#486581">multi-modal imaging</text></g>
- <text x="70" y="445" font-family="Arial, sans-serif" font-size="15" fill="#627d98">Prompting, parameter updates, and generalization targets are distinct intervention points.</text>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="518.4pt" height="280.8pt" viewBox="0 0 518.4 280.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-16T11:52:42.919514</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 280.8
+L 518.4 280.8
+L 518.4 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 40.9536 137.0304
+L 150.8544 137.0304
+Q 162.2592 137.0304 162.2592 130.8528
+L 162.2592 82.5552
+Q 162.2592 76.3776 150.8544 76.3776
+L 40.9536 76.3776
+Q 29.5488 76.3776 29.5488 82.5552
+L 29.5488 130.8528
+Q 29.5488 137.0304 40.9536 137.0304
+z
+" clip-path="url(#p2770e1876e)" style="fill: #eaf2f8; stroke: #2d6a94; stroke-width: 1.35; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 204.2496 137.0304
+L 314.1504 137.0304
+Q 325.5552 137.0304 325.5552 130.8528
+L 325.5552 82.5552
+Q 325.5552 76.3776 314.1504 76.3776
+L 204.2496 76.3776
+Q 192.8448 76.3776 192.8448 82.5552
+L 192.8448 130.8528
+Q 192.8448 137.0304 204.2496 137.0304
+z
+" clip-path="url(#p2770e1876e)" style="fill: #fff5d8; stroke: #b67a22; stroke-width: 1.35; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 367.5456 145.4544
+L 477.4464 145.4544
+Q 488.8512 145.4544 488.8512 139.2768
+L 488.8512 74.1312
+Q 488.8512 67.9536 477.4464 67.9536
+L 367.5456 67.9536
+Q 356.1408 67.9536 356.1408 74.1312
+L 356.1408 139.2768
+Q 356.1408 145.4544 367.5456 145.4544
+z
+" clip-path="url(#p2770e1876e)" style="fill: #f0eaf8; stroke: #7b5cc8; stroke-width: 1.35; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 160.704 106.704
+Q 175.2192 106.704 187.889644 106.704
+" clip-path="url(#p2770e1876e)" style="fill: none; stroke: #476682; stroke-width: 1.65; stroke-linecap: round"/>
+    <path d="M 181.889644 103.704
+L 187.889644 106.704
+L 181.889644 109.704
+z
+" clip-path="url(#p2770e1876e)" style="fill: #476682; stroke: #476682; stroke-width: 1.65; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 324 106.704
+Q 338.5152 106.704 351.185644 106.704
+" clip-path="url(#p2770e1876e)" style="fill: none; stroke: #476682; stroke-width: 1.65; stroke-linecap: round"/>
+    <path d="M 345.185644 103.704
+L 351.185644 106.704
+L 345.185644 109.704
+z
+" clip-path="url(#p2770e1876e)" style="fill: #476682; stroke: #476682; stroke-width: 1.65; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 422.496 144.612
+Q 422.496 169.884 422.496 193.311244
+" clip-path="url(#p2770e1876e)" style="fill: none; stroke: #7b5cc8; stroke-width: 1.65; stroke-linecap: round"/>
+    <path d="M 425.496 187.311244
+L 422.496 193.311244
+L 419.496 187.311244
+z
+" clip-path="url(#p2770e1876e)" style="fill: #7b5cc8; stroke: #7b5cc8; stroke-width: 1.65; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 40.9536 238.1184
+L 477.4464 238.1184
+Q 488.8512 238.1184 488.8512 231.9408
+L 488.8512 200.4912
+Q 488.8512 194.3136 477.4464 194.3136
+L 40.9536 194.3136
+Q 29.5488 194.3136 29.5488 200.4912
+L 29.5488 231.9408
+Q 29.5488 238.1184 40.9536 238.1184
+z
+" clip-path="url(#p2770e1876e)" style="fill: #f8fafc; stroke: #c8d5e2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 69.4656 226.044
+L 158.6304 226.044
+Q 170.0352 226.044 170.0352 219.8664
+L 170.0352 212.2848
+Q 170.0352 206.1072 158.6304 206.1072
+L 69.4656 206.1072
+Q 58.0608 206.1072 58.0608 212.2848
+L 58.0608 219.8664
+Q 58.0608 226.044 69.4656 226.044
+z
+" clip-path="url(#p2770e1876e)" style="fill: #f9e8ee; stroke: #c8829a; stroke-width: 0.95; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 214.6176 226.044
+L 303.7824 226.044
+Q 315.1872 226.044 315.1872 219.8664
+L 315.1872 212.2848
+Q 315.1872 206.1072 303.7824 206.1072
+L 214.6176 206.1072
+Q 203.2128 206.1072 203.2128 212.2848
+L 203.2128 219.8664
+Q 203.2128 226.044 214.6176 226.044
+z
+" clip-path="url(#p2770e1876e)" style="fill: #eaf2f8; stroke: #2d6a94; stroke-width: 0.95; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 359.7696 226.044
+L 448.9344 226.044
+Q 460.3392 226.044 460.3392 219.8664
+L 460.3392 212.2848
+Q 460.3392 206.1072 448.9344 206.1072
+L 359.7696 206.1072
+Q 348.3648 206.1072 348.3648 212.2848
+L 348.3648 219.8664
+Q 348.3648 226.044 359.7696 226.044
+z
+" clip-path="url(#p2770e1876e)" style="fill: #e8f4ed; stroke: #3e8b63; stroke-width: 0.95; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 33.696 49.14
+L 484.704 49.14
+" clip-path="url(#p2770e1876e)" style="fill: none; stroke: #d8e1ea; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #17324d" x="33.696" y="27.122027" transform="rotate(-0 33.696 27.122027)">From natural-image pretraining to medical use</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #53718f" x="33.696" y="40.107624" transform="rotate(-0 33.696 40.107624)">Adaptation is a chain of decisions: identify the shift, choose an intervention, then test the setting.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #17324d" transform="translate(60.896344 97.298093)">Natural-image</text>
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #17324d" transform="translate(68.486695 109.122898)">pretraining</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(63.205828 117.881546)">SAM representation</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(65.982563 128.645872)">+ prompt interface</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #17324d" x="259.2" y="98.405515" transform="rotate(-0 259.2 98.405515)">Domain shift</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 7px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(221.857187 112.934379)">Modality · scale · 2D/3D</text>
+    <text style="font-size: 7px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(220.102812 123.810834)">Contrast · scanner / stain</text>
+    <text style="font-size: 7px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(226.514375 133.256664)">Annotation ambiguity</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #17324d" transform="translate(395.084437 91.975639)">Adaptation</text>
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #17324d" transform="translate(402.946312 104.774975)">choices</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 6.9px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(400.252664 112.373898)">Prompt design</text>
+    <text style="font-size: 6.9px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(393.156445 122.451334)">Parameter updates</text>
+    <text style="font-size: 6.9px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(393.537023 132.488341)">Domain adaptation</text>
+    <text style="font-size: 6.9px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(388.170117 142.484918)">Domain generalization</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 11.8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #17324d" x="33.696" y="167.9184" transform="rotate(-0 33.696 167.9184)">Medical settings</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #53718f" x="33.696" y="177.7464" transform="rotate(-0 33.696 177.7464)">The target setting determines what must be preserved, adapted, and evaluated.</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 6.9px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #17324d" x="114.048" y="217.861177" transform="rotate(-0 114.048 217.861177)">Digital pathology</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.9px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #17324d" x="259.2" y="217.861177" transform="rotate(-0 259.2 217.861177)">Radiology</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 6.9px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #17324d" x="404.352" y="217.861177" transform="rotate(-0 404.352 217.861177)">Multi-modal imaging</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #53718f" x="33.696" y="263.058967" transform="rotate(-0 33.696 263.058967)">Prompting, parameter updates, and generalization targets are distinct intervention points.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2770e1876e">
+   <rect x="0" y="0" width="518.4" height="280.8"/>
+  </clipPath>
+ </defs>
 </svg>

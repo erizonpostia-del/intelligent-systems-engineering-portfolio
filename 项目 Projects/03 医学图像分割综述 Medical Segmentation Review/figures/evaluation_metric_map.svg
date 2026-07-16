@@ -1,9 +1,152 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
- <title id="title">Evaluation metric map</title><desc id="desc">Original schematic showing complementary dimensions of medical segmentation evaluation.</desc><rect width="1200" height="500" fill="#f8fafc"/><text x="70" y="65" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#102a43">A metric is a lens, not a verdict</text><text x="70" y="96" font-family="Arial, sans-serif" font-size="16" fill="#486581">Use complementary measures and state the evaluation protocol</text>
- <g font-family="Arial, sans-serif"><circle cx="600" cy="255" r="98" fill="#d9eaf7" stroke="#2b6b92" stroke-width="3"/><text x="600" y="245" text-anchor="middle" font-size="24" font-weight="700" fill="#12344d">Segmentation</text><text x="600" y="276" text-anchor="middle" font-size="24" font-weight="700" fill="#12344d">evaluation</text>
- <rect x="90" y="155" width="230" height="115" rx="16" fill="#e3f5ec" stroke="#23835b" stroke-width="2"/><text x="205" y="198" text-anchor="middle" font-size="21" font-weight="700" fill="#164e36">Overlap</text><text x="205" y="228" text-anchor="middle" font-size="16" fill="#164e36">Dice · IoU</text><line x1="320" y1="215" x2="495" y2="240" stroke="#334e68" stroke-width="3"/>
- <rect x="90" y="325" width="230" height="115" rx="16" fill="#fff3cd" stroke="#b7791f" stroke-width="2"/><text x="205" y="368" text-anchor="middle" font-size="21" font-weight="700" fill="#744210">Detection balance</text><text x="205" y="398" text-anchor="middle" font-size="16" fill="#744210">precision · recall</text><line x1="320" y1="380" x2="500" y2="290" stroke="#334e68" stroke-width="3"/>
- <rect x="880" y="155" width="230" height="115" rx="16" fill="#eadcf8" stroke="#805ad5" stroke-width="2"/><text x="995" y="198" text-anchor="middle" font-size="21" font-weight="700" fill="#553c9a">Boundary</text><text x="995" y="228" text-anchor="middle" font-size="16" fill="#553c9a">HD · HD95 · ASSD</text><line x1="880" y1="215" x2="705" y2="240" stroke="#334e68" stroke-width="3"/>
- <rect x="880" y="325" width="230" height="115" rx="16" fill="#dcecf9" stroke="#2b6b92" stroke-width="2"/><text x="995" y="362" text-anchor="middle" font-size="21" font-weight="700" fill="#12344d">Deployment context</text><text x="995" y="392" text-anchor="middle" font-size="16" fill="#12344d">robustness · efficiency</text><line x1="880" y1="380" x2="705" y2="290" stroke="#334e68" stroke-width="3"/></g>
- <text x="600" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#627d98">Always report: unit, 2D/3D, prompt protocol, empty-mask rule, aggregation, and external-validation status.</text>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="518.4pt" height="267.84pt" viewBox="0 0 518.4 267.84" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-16T11:52:43.073055</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 267.84
+L 518.4 267.84
+L 518.4 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 40.9536 150.79392
+L 233.7984 150.79392
+Q 245.2032 150.79392 245.2032 144.90144
+L 245.2032 104.18976
+Q 245.2032 98.29728 233.7984 98.29728
+L 40.9536 98.29728
+Q 29.5488 98.29728 29.5488 104.18976
+L 29.5488 144.90144
+Q 29.5488 150.79392 40.9536 150.79392
+z
+" clip-path="url(#pb18ccc5e21)" style="fill: #eaf2f8; stroke: #2d6a94; stroke-width: 1.35; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 284.6016 150.79392
+L 477.4464 150.79392
+Q 488.8512 150.79392 488.8512 144.90144
+L 488.8512 104.18976
+Q 488.8512 98.29728 477.4464 98.29728
+L 284.6016 98.29728
+Q 273.1968 98.29728 273.1968 104.18976
+L 273.1968 144.90144
+Q 273.1968 150.79392 284.6016 150.79392
+z
+" clip-path="url(#pb18ccc5e21)" style="fill: #f0eaf8; stroke: #7b5cc8; stroke-width: 1.35; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 40.9536 212.39712
+L 233.7984 212.39712
+Q 245.2032 212.39712 245.2032 206.50464
+L 245.2032 165.79296
+Q 245.2032 159.90048 233.7984 159.90048
+L 40.9536 159.90048
+Q 29.5488 159.90048 29.5488 165.79296
+L 29.5488 206.50464
+Q 29.5488 212.39712 40.9536 212.39712
+z
+" clip-path="url(#pb18ccc5e21)" style="fill: #fff5d8; stroke: #b67a22; stroke-width: 1.35; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 284.6016 212.39712
+L 477.4464 212.39712
+Q 488.8512 212.39712 488.8512 206.50464
+L 488.8512 165.79296
+Q 488.8512 159.90048 477.4464 159.90048
+L 284.6016 159.90048
+Q 273.1968 159.90048 273.1968 165.79296
+L 273.1968 206.50464
+Q 273.1968 212.39712 284.6016 212.39712
+z
+" clip-path="url(#pb18ccc5e21)" style="fill: #e8f4ed; stroke: #3e8b63; stroke-width: 1.35; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 40.9536 243.19872
+L 477.4464 243.19872
+Q 488.8512 243.19872 488.8512 237.30624
+L 488.8512 227.39616
+Q 488.8512 221.50368 477.4464 221.50368
+L 40.9536 221.50368
+Q 29.5488 221.50368 29.5488 227.39616
+L 29.5488 237.30624
+Q 29.5488 243.19872 40.9536 243.19872
+z
+" clip-path="url(#pb18ccc5e21)" style="fill: #f8fafc; stroke: #c8d5e2; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 33.696 46.872
+L 484.704 46.872
+" clip-path="url(#pb18ccc5e21)" style="fill: none; stroke: #d8e1ea; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #17324d" x="33.696" y="26.085403" transform="rotate(-0 33.696 26.085403)">A metric is a lens, not a verdict</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #53718f" x="33.696" y="38.358024" transform="rotate(-0 33.696 38.358024)">Use complementary measurements and state the protocol that makes each number interpretable.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 11.8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #17324d" x="33.696" y="68.2992" transform="rotate(-0 33.696 68.2992)">Complementary evaluation lenses</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #53718f" x="33.696" y="78.20928" transform="rotate(-0 33.696 78.20928)">No single score captures overlap, boundary fidelity, detection trade-offs, and deployment relevance.</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #17324d" x="51.84" y="117.8162" transform="rotate(-0 51.84 117.8162)">Overlap</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(51.84 134.301646)">Dice · IoU</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(51.84 145.1128)">How much of the reference mask is covered?</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #17324d" x="295.488" y="117.747293" transform="rotate(-0 295.488 117.747293)">Boundary fidelity</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(295.488 134.34674)">HD · HD95 · ASD / ASSD</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(295.488 144.420784)">How far do predicted and reference surfaces differ?</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #17324d" x="51.84" y="180.393931" transform="rotate(-0 51.84 180.393931)">Detection trade-offs</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(51.84 195.216299)">Precision · recall / sensitivity</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(51.84 205.980625)">What is missed, and what is over-segmented?</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #17324d" x="295.488" y="179.286509" transform="rotate(-0 295.488 179.286509)">Robustness and utility</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(295.488 195.216299)">External validation · efficiency</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #53718f" transform="translate(295.488 206.023984)">Does performance hold under practical variation?</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 6.8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #17324d" x="259.2" y="234.110899" transform="rotate(-0 259.2 234.110899)">Always report: unit of analysis · 2D/3D · prompt protocol · empty-mask rule · aggregation · external validation</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb18ccc5e21">
+   <rect x="0" y="0" width="518.4" height="267.84"/>
+  </clipPath>
+ </defs>
 </svg>
