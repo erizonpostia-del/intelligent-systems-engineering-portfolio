@@ -1,0 +1,3 @@
+﻿"condition","model","initialization","dataset_scope","classes","epochs_requested","image_size","batch_size","seed","resume_status","evaluation_split","run_count","comparability"
+"Standard","YOLO11s","Started from yolo11s.pt","Archived five-class clean dataset","fire; smoke; animal; person; vehicle","50","640","16","0","false","validation","1","Partially controlled comparison; initialization differs from From3Class."
+"From3Class","YOLO11s","Continued from an archived three-class checkpoint","Archived five-class clean dataset","fire; smoke; animal; person; vehicle","50","640","16","0","true","validation","1","Partially controlled comparison; resume state differs from Standard."
