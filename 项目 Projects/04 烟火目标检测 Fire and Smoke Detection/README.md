@@ -14,6 +14,8 @@ The public materials were rebuilt from archived training records after an audit 
 
 This question is deliberately narrow. The evidence supports a **partially controlled, single-run archived comparison**, not a universal ranking of models. Both conditions requested 50 epochs with image size 640, batch size 16, seed 0, and the same archived five-class dataset path. The Standard condition started from `yolo11s.pt`; the From3Class condition continued from an archived three-class checkpoint. The differing initialization and resume state prevent a strict controlled-ablation claim.
 
+I focused on this comparison because it captures a practical transfer question: whether a checkpoint first trained on a narrower three-class task could provide a useful initialization after the dataset expanded to five classes.
+
 ## Dataset scope and governance
 
 The archived clean dataset contains 22,899 images and 22,899 matching YOLO label files: 16,459 training, 2,002 validation, and 4,438 held-out images. The classes are `fire`, `smoke`, `animal`, `person`, and `vehicle`.
@@ -33,7 +35,7 @@ The main comparison uses a pre-declared selection rule: **for each condition, re
 | Standard | 40 | 0.58295 | 0.53123 | 0.53969 | 0.31296 |
 | From3Class | 40 | 0.63734 | 0.53157 | 0.56365 | 0.32864 |
 
-For this selection rule, the archived From3Class run records higher validation mAP50 and mAP50-95. That result is compatible with an effect of the initialization, prior three-class training, or the continued-training procedure; the archive does not isolate those mechanisms. It is not evidence of stable superiority or broader generalization.
+For this selection rule, the archived From3Class run records higher validation mAP50 and mAP50-95. The recall difference is small, and the experiment contains only one archived run per condition. I therefore treat the result as evidence that the initialization strategy was promising in this setup, not as proof of a generally superior training procedure.
 
 ![Validation mAP comparison](figures/validation_map_comparison.png)
 
@@ -49,6 +51,8 @@ The final complete training epoch tells a different, complementary story. At epo
 
 The results are archived validation results from one recorded run per condition. No repeated-seed summary, uncertainty interval, or independent held-out-split evaluation is available in the audited materials. The appropriate interpretation is therefore limited to the observed records: under this archived setup, the From3Class condition had higher recorded validation mAP values at the documented mAP50-95 selection epoch, while precision and recall should still be read as a trade-off rather than a blanket win.
 
+Reconstructing the experiment changed how I think about model comparison. A small metric improvement is difficult to interpret when the evaluation protocol, repeated runs, environment versions, and data provenance are incomplete. For the public version, I chose to preserve that uncertainty rather than present the strongest available number without context.
+
 ## Reproducibility boundary
 
 The public CSV files preserve only audited aggregate and per-epoch metrics. They can be checked directly and used to rebuild the figures:
@@ -62,11 +66,11 @@ The public script regenerates the figures from audited aggregate and per-epoch C
 
 ## Repository guide
 
-- [`results/`](results/) — audited, sanitized validation tables and per-epoch metrics.
-- [`figures/`](figures/) — plots regenerated only from the public CSV files.
-- [`tables/`](tables/) — readable condition, result, and evidence-boundary summaries.
-- [`docs/experiment_scope.md`](docs/experiment_scope.md) — scope and non-claims.
-- [`docs/methodology.md`](docs/methodology.md) — metric-selection and audit method.
-- [`docs/data_governance.md`](docs/data_governance.md) — data, privacy, and leakage boundary.
-- [`docs/contribution_scope.md`](docs/contribution_scope.md) — evidence-based attribution boundary.
-- [`docs/reproducibility.md`](docs/reproducibility.md) — what this repository can and cannot reproduce.
+- [`results/`](results/): audited, sanitized validation tables and per-epoch metrics.
+- [`figures/`](figures/): plots regenerated only from the public CSV files.
+- [`tables/`](tables/): readable condition, result, and evidence-boundary summaries.
+- [`docs/experiment_scope.md`](docs/experiment_scope.md): scope and non-claims.
+- [`docs/methodology.md`](docs/methodology.md): metric-selection and audit method.
+- [`docs/data_governance.md`](docs/data_governance.md): data, privacy, and leakage boundary.
+- [`docs/contribution_scope.md`](docs/contribution_scope.md): evidence-based attribution boundary.
+- [`docs/reproducibility.md`](docs/reproducibility.md): what this repository can and cannot reproduce.
