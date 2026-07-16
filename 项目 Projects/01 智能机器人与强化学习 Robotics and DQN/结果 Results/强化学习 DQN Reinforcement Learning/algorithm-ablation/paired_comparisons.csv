@@ -1,0 +1,26 @@
+comparison,metric,paired_mean_difference,paired_median_difference,minimum_difference,maximum_difference,improved_seed_count,seed_count
+Double DQN - Vanilla DQN,success_rate,-0.046,-0.04999999999999993,-0.21999999999999997,0.16999999999999998,2,5
+Double DQN - Vanilla DQN,mean_score,-0.8539999999999999,-2.1899999999999995,-6.540000000000001,5.460000000000001,2,5
+Double DQN - Vanilla DQN,median_score,-0.4,0.0,-5.5,4.0,2,5
+Double DQN - Vanilla DQN,validation_success_auc,-26.5,5.0,-120.0,15.0,3,5
+Double DQN - Vanilla DQN,training_time_seconds,-25.315495259920134,-5.277941899839789,-102.28215099987574,32.61136199999601,2,5
+Dueling DQN - Vanilla DQN,success_rate,0.05200000000000001,-0.08999999999999997,-0.32,0.61,2,5
+Dueling DQN - Vanilla DQN,mean_score,30.95999999999999,2.76,-8.209999999999999,144.94,3,5
+Dueling DQN - Vanilla DQN,median_score,24.1,-0.5,-8.0,119.5,2,5
+Dueling DQN - Vanilla DQN,validation_success_auc,157.5,85.0,-52.5,592.5,3,5
+Dueling DQN - Vanilla DQN,training_time_seconds,582.5947850801051,395.74720850004815,165.9856410000939,1156.2241812001448,5,5
+Double Dueling DQN - Double DQN,success_rate,0.04400000000000002,-0.010000000000000009,-0.10999999999999999,0.26,2,5
+Double Dueling DQN - Double DQN,mean_score,8.268,3.74,-3.200000000000001,32.35,4,5
+Double Dueling DQN - Double DQN,median_score,5.3,2.0,0.0,21.5,4,5
+Double Dueling DQN - Double DQN,validation_success_auc,143.0,125.0,47.5,242.5,5,5
+Double Dueling DQN - Double DQN,training_time_seconds,427.9286883799825,445.89765090006404,310.55898689990863,594.3116601998918,5,5
+Double Dueling DQN - Dueling DQN,success_rate,-0.054000000000000006,-0.019999999999999907,-0.55,0.38999999999999996,2,5
+Double Dueling DQN - Dueling DQN,mean_score,-23.546,-1.7800000000000011,-142.68,18.33,2,5
+Double Dueling DQN - Dueling DQN,median_score,-19.2,0.0,-115.5,14.5,2,5
+Double Dueling DQN - Dueling DQN,validation_success_auc,-41.0,37.5,-462.5,187.5,3,5
+Double Dueling DQN - Dueling DQN,training_time_seconds,-179.98159196004272,-46.616794999921694,-797.7632096000016,222.57126579992473,2,5
+Double Dueling DQN - Vanilla DQN,success_rate,-0.0019999999999999797,0.06,-0.22000000000000003,0.21000000000000008,3,5
+Double Dueling DQN - Vanilla DQN,mean_score,7.414,2.26,-2.8000000000000007,30.16,3,5
+Double Dueling DQN - Vanilla DQN,median_score,4.9,4.0,-4.0,21.5,3,5
+Double Dueling DQN - Vanilla DQN,validation_success_auc,116.5,130.0,7.5,250.0,5,5
+Double Dueling DQN - Vanilla DQN,training_time_seconds,402.61319312006236,388.5569068000186,208.2768359000329,600.023658900056,5,5

@@ -1,23 +1,19 @@
-# ROS1 Simulation / ROS1 仿真说明
+# ROS1 simulation
 
-## Environment
+## Scope
 
-This material was recovered from the user's personal Ubuntu 18.04 virtual machine. The verified environment record identifies ROS1 Melodic, Gazebo 9, RViz, a catkin workspace, TurtleBot3 simulation, and `move_base`-based navigation components.
+I developed this workstream in my personal Ubuntu 18.04 virtual-machine environment with ROS1 Melodic, Gazebo 9, RViz, TurtleBot3 simulation, and `move_base`. It is separate from the later team ROS2 physical deployment.
 
-## Public scope
+## Implemented components
 
-The public package contains selected `tb3_course_task` files only. The paired ROS1 maps are course-provided simulation resources, not a personal mapping deliverable. `beginner_tutorials`, installed-package RViz configurations, raw logs, build outputs, and private environment artifacts are excluded.
+- `house_auto_avoid.py` subscribes to `/scan` and publishes `geometry_msgs/Twist` commands to `/cmd_vel` from sector-based LiDAR distances.
+- `house_auto_avoid.launch` starts the TurtleBot3 House Gazebo world and the obstacle-handling node.
+- `world_outer_loop.py` sends nine `move_base` goals and records success or failure for each goal.
 
-## Included functions
+## Verified result
 
-- `house_auto_avoid.py` subscribes to `/scan` and publishes `geometry_msgs/Twist` commands to `/cmd_vel` using sector-based LiDAR distances.
-- `world_outer_loop.py` sends nine `move_base` action goals and records a success/failure result for each goal.
-- `house_auto_avoid.launch` starts the TurtleBot3 House Gazebo world and the obstacle-avoidance node.
+I completed a nine-goal multi-waypoint navigation sequence in Gazebo using the ROS `move_base` action interface. The claim is supported by the public source subset, redacted terminal evidence, and recovered log evidence. It does not establish the same result on a physical TurtleBot.
 
-## Verified Result Boundary
+## Included and excluded material
 
-The available terminal evidence verifies a nine-goal sequence in Gazebo simulation. It is not evidence of a physical TurtleBot completing the same sequence.
-
-## Known Limitations
-
-The original full workspace, build command, launch invocation, and custom RViz configuration were not recovered. These omissions do not change the verified ROS1 simulation result.
+The public package contains selected `tb3_course_task` files and paired course-provided maps. Raw logs, build outputs, the complete workspace, and private environment records remain private. The maps are simulation resources, not a personal mapping claim.

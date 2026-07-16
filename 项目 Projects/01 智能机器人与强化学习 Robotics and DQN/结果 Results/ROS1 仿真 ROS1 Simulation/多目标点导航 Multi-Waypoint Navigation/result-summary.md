@@ -2,7 +2,7 @@
 
 ## Scope
 
-The result concerns the user's personal ROS1 Gazebo simulation environment, not the team physical TurtleBot environment.
+The result concerns my personal ROS1 Gazebo simulation environment, not the team physical TurtleBot environment.
 
 ## Script and interface
 

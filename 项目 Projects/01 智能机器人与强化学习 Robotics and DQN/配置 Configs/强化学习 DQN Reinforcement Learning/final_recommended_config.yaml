@@ -1,0 +1,36 @@
+{
+  "selection_role": "low-complexity baseline, not a universal best algorithm",
+  "selection_rule": "within the lower-parameter pair, select the higher median held-out success rate; report all architecture trade-offs alongside it",
+  "algorithm": "vanilla_dqn",
+  "observation": "raw_4frame",
+  "input_dimension": 720,
+  "frame_stack": 4,
+  "feature_enabled": false,
+  "reward_variant": "original_reward",
+  "episodes": 3000,
+  "replay_capacity": 50000,
+  "target_update": 750,
+  "learning_rate": 0.0001,
+  "gamma": 0.99,
+  "hidden_layers": [
+    256,
+    256
+  ],
+  "batch_size": 128,
+  "warm_up": 1000,
+  "epsilon_schedule": "1.0 to 0.05 over 90000 steps",
+  "optimizer": "Adam",
+  "loss": "SmoothL1Loss",
+  "validation_protocol": "20 fixed seeds every 100 episodes; epsilon=0",
+  "checkpoint_selection": "success rate, median score, mean score, earlier episode",
+  "test_protocol": "100 fixed seeds once on validation-selected checkpoint",
+  "train_seeds": [
+    202607151,
+    202607152,
+    202607153,
+    202607154,
+    202607155
+  ],
+  "validation_seed_manifest": "configs/runs/validation_seeds_20.json",
+  "test_seed_manifest": "configs/runs/standard_test_seeds_100.json"
+}

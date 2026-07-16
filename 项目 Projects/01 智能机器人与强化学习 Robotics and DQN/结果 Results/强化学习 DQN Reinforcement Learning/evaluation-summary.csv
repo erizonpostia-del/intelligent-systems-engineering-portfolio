@@ -1,0 +1,6 @@
+Evaluation,SeedMode,Episodes,SuccessScoreThreshold,SuccessCount,SuccessRatePercent,MeanScore,MedianScore,StdDevPopulation,MinScore,MaxScore,EvidenceStatus,Notes
+fixed_10000,fixed,50,score>=10,36,72.00,26.12,19.5,27.8256,2,171,Verified from raw results,Aggregate and score list recalculated; recovered file has no per-episode seeds
+random_20260611_143306,random,50,score>=10,38,76.00,30.00,20,28.0991,2,123,Verified from raw results,Per-episode seeds retained
+random_20260611_144034,random,50,score>=10,38,76.00,25.72,22,17.5066,2,72,Verified from raw results,Additional recovered random-seed evaluation
+random_20260611_144202,random,50,score>=10,35,70.00,28.46,22.5,25.6080,3,122,Verified from raw results,Per-episode seeds retained
+random_20260611_144331,random,50,score>=10,34,68.00,27.36,17,29.8943,2,144,Verified from raw results,Per-episode seeds retained

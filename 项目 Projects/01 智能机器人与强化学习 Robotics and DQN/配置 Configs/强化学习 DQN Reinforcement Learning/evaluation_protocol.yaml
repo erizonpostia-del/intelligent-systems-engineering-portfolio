@@ -1,0 +1,2 @@
+validation: 20 fixed seeds; epsilon=0; every 100 episodes
+test: 100 fixed seeds; used once after validation checkpoint selection

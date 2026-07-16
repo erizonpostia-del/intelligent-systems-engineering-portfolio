@@ -1,0 +1,22 @@
+{
+  "vanilla_dqn": {
+    "double_target": false,
+    "dueling_network": false,
+    "target_rule": "max target Q"
+  },
+  "double_dqn": {
+    "double_target": true,
+    "dueling_network": false,
+    "target_rule": "online argmax followed by target gather"
+  },
+  "dueling_dqn": {
+    "double_target": false,
+    "dueling_network": true,
+    "target_rule": "max target Q"
+  },
+  "double_dueling_dqn": {
+    "double_target": true,
+    "dueling_network": true,
+    "target_rule": "online argmax followed by target gather"
+  }
+}

@@ -1,0 +1,4 @@
+raw_4frame:
+  input_dimension: 720
+  frame_stack: 4
+  feature_enabled: false

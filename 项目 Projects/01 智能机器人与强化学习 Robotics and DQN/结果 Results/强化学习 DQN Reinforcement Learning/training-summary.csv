@@ -1,0 +1,2 @@
+Run,EpisodesRecorded,FinalGlobalStep,FinalEpisodeScore,FinalEpisodeReward,FinalEpisodeSteps,FinalEpsilon,FinalLossMean,FinalBufferSize,EvaluationCheckpoints,FinalEvaluationSuccess10,FinalEvaluationMean,EvidenceStatus
+formal_07_features_stack4_2000ep,2000,147796,3,7.3,165,0.05,0.039488,50000,20,36,26.12,Verified from source and raw results

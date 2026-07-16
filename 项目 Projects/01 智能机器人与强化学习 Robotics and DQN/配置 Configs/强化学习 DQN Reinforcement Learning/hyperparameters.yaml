@@ -1,0 +1,29 @@
+# Sanitized transcription of the final retained run configuration.
+# Evidence: final configuration JSON is hash-identical in source logs and Raw Results.
+run_name: formal_07_features_stack4_2000ep
+algorithm: Double Dueling DQN with target network and replay buffer
+environment: FlappyBird-v0
+episodes: 2000
+seed: 123
+use_features: true
+frame_stack: 4
+obs_dim: 884
+action_dim: 2
+reward_shaping: none
+hidden_dims: [256, 256]
+learning_rate: 0.0001
+gamma: 0.99
+batch_size: 128
+replay_capacity: 50000
+learning_starts: 1000
+train_frequency: 4
+target_update_frequency: 750
+evaluation_interval: 100
+evaluation_episodes: 50
+evaluation_seed: 10000
+epsilon_start: 1.0
+epsilon_end: 0.05
+epsilon_decay_steps: 90000
+random_flap_probability: 0.15
+gradient_clip_norm: 10.0
+device: cpu

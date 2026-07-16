@@ -1,0 +1,5 @@
+algorithm,parameter_count,mean_training_time_seconds
+vanilla_dqn,250882,678.7678891199175
+double_dqn,250882,653.4523938599974
+dueling_dqn,382723,1261.3626742000226
+double_dueling_dqn,382723,1081.3810822399798

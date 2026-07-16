@@ -1,0 +1,13 @@
+metric,effect,mean_effect,median_effect,min_effect,max_effect,positive_seed_count,seed_count
+success_rate,double_target_main_effect,-0.05,-0.11999999999999994,-0.19000000000000003,0.23499999999999996,1,5
+success_rate,dueling_architecture_main_effect,0.04800000000000001,-0.009999999999999953,-0.165,0.25,2,5
+success_rate,double_x_dueling_interaction,-0.007999999999999997,0.08999999999999997,-0.72,0.31,4,5
+mean_score,double_target_main_effect,-12.2,-4.160000000000001,-68.61,10.969999999999999,2,5
+mean_score,dueling_architecture_main_effect,19.614,2.3499999999999996,-0.8499999999999988,70.87,4,5
+mean_score,double_x_dueling_interaction,-22.692,4.76,-148.14000000000001,16.020000000000003,3,5
+median_score,double_target_main_effect,-9.8,-2.75,-56.0,9.25,2,5
+median_score,dueling_architecture_main_effect,14.7,-0.25,-2.75,60.0,2,5
+median_score,double_x_dueling_interaction,-18.8,5.5,-119.0,10.5,4,5
+validation_success_auc,double_target_main_effect,-33.75,10.0,-228.75,101.25,3,5
+validation_success_auc,dueling_architecture_main_effect,150.25,131.25,-2.5,358.75,4,5
+validation_success_auc,double_x_dueling_interaction,-14.5,92.5,-467.5,172.5,4,5
