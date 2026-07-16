@@ -23,6 +23,38 @@ ALPHAS = (0.001, 0.01, 0.1, 1.0, 10.0, 100.0)
 DATASET_CONFIG = {"n_samples": 300, "n_features": 30, "n_informative": 8, "noise": 15.0, "random_state": RANDOM_STATE}
 OUTER_FOLDS = 5
 INNER_FOLDS = 3
+RIDGE_COLOR = "#0F4D92"
+MEAN_COLOR = "#B64342"
+
+
+def apply_figure_style() -> None:
+    """Apply a consistent publication-oriented style without changing plotted content."""
+    plt.rcParams.update(
+        {
+            "font.family": "sans-serif",
+            "font.sans-serif": ["Arial", "DejaVu Sans", "Liberation Sans"],
+            "font.size": 10,
+            "axes.titlesize": 13,
+            "axes.labelsize": 11,
+            "axes.linewidth": 0.8,
+            "axes.spines.right": False,
+            "axes.spines.top": False,
+            "legend.frameon": False,
+            "legend.fontsize": 9,
+            "svg.fonttype": "none",
+            "pdf.fonttype": 42,
+        }
+    )
+
+
+def save_figure(fig: plt.Figure, figures_dir: Path, stem: str) -> None:
+    """Save identical plotted content in raster and editable vector formats."""
+    fig.tight_layout()
+    output_path = figures_dir / stem
+    fig.savefig(output_path.with_suffix(".png"), dpi=300)
+    fig.savefig(output_path.with_suffix(".svg"))
+    fig.savefig(output_path.with_suffix(".pdf"))
+    plt.close(fig)
 
 
 def output_directories() -> tuple[Path, Path]:
@@ -67,15 +99,29 @@ def run_nested_cv(features: np.ndarray, target: np.ndarray) -> pd.DataFrame:
 
 def save_figure(results: pd.DataFrame, figures_dir: Path) -> None:
     """Plot outer-fold MSEs and their mean without exposing inner test data."""
-    fig, ax = plt.subplots(figsize=(7, 4.5))
-    ax.plot(results["outer_fold"], results["outer_test_mse"], marker="o", color="#2563eb", label="Outer-fold MSE")
-    ax.axhline(results["outer_test_mse"].mean(), color="#dc2626", linestyle="--", label="Mean outer-fold MSE")
+    apply_figure_style()
+    fig, ax = plt.subplots(figsize=(6.8, 4.3))
+    ax.plot(
+        results["outer_fold"],
+        results["outer_test_mse"],
+        marker="o",
+        markersize=6,
+        linewidth=2.0,
+        color=RIDGE_COLOR,
+        label="Outer-fold MSE",
+    )
+    ax.axhline(
+        results["outer_test_mse"].mean(),
+        color=MEAN_COLOR,
+        linestyle="--",
+        linewidth=1.7,
+        label="Mean outer-fold MSE",
+    )
     ax.set(xticks=results["outer_fold"], xlabel="Outer fold", ylabel="Mean squared error", title="Nested cross-validation outer-fold results")
-    ax.grid(True, linestyle="--", alpha=0.35)
-    ax.legend()
-    fig.tight_layout()
-    fig.savefig(figures_dir / "nested_cv_results.png", dpi=200)
-    plt.close(fig)
+    ax.grid(axis="y", color="#D9D9D9", linewidth=0.7)
+    ax.tick_params(direction="out", length=4, width=0.8)
+    ax.legend(loc="upper left")
+    save_figure(fig, figures_dir, "nested_cv_results")
 
 
 def main() -> None:

@@ -30,6 +30,37 @@ DATASET_CONFIG = {
     "noise": 15.0,
     "random_state": RANDOM_STATE,
 }
+COLORS = {"Ridge": "#0F4D92", "Lasso": "#B64342"}
+
+
+def apply_figure_style() -> None:
+    """Apply a consistent publication-oriented style without changing plotted content."""
+    plt.rcParams.update(
+        {
+            "font.family": "sans-serif",
+            "font.sans-serif": ["Arial", "DejaVu Sans", "Liberation Sans"],
+            "font.size": 10,
+            "axes.titlesize": 13,
+            "axes.labelsize": 11,
+            "axes.linewidth": 0.8,
+            "axes.spines.right": False,
+            "axes.spines.top": False,
+            "legend.frameon": False,
+            "legend.fontsize": 9,
+            "svg.fonttype": "none",
+            "pdf.fonttype": 42,
+        }
+    )
+
+
+def save_figure(fig: plt.Figure, figures_dir: Path, stem: str) -> None:
+    """Save identical plotted content in raster and editable vector formats."""
+    fig.tight_layout()
+    output_path = figures_dir / stem
+    fig.savefig(output_path.with_suffix(".png"), dpi=300)
+    fig.savefig(output_path.with_suffix(".svg"))
+    fig.savefig(output_path.with_suffix(".pdf"))
+    plt.close(fig)
 
 
 def output_directories() -> tuple[Path, Path]:
@@ -135,37 +166,66 @@ def evaluate_selected_models(
 
 def save_figures(candidates: pd.DataFrame, figures_dir: Path) -> None:
     """Export validation-focused diagnostic figures without test-set sweeps."""
-    colors = {"Ridge": "#2563eb", "Lasso": "#dc2626"}
+    apply_figure_style()
 
-    fig, ax = plt.subplots(figsize=(8, 5))
+    fig, ax = plt.subplots(figsize=(7.2, 4.5))
     for model_name, rows in candidates.groupby("model", sort=False):
-        ax.plot(rows["alpha"], rows["train_mse"], marker="o", color=colors[model_name], label=f"{model_name} train MSE")
-        ax.plot(rows["alpha"], rows["validation_mse"], marker="o", linestyle="--", color=colors[model_name], label=f"{model_name} validation MSE")
+        ax.plot(
+            rows["alpha"],
+            rows["train_mse"],
+            marker="o",
+            markersize=5.5,
+            linewidth=2.0,
+            color=COLORS[model_name],
+            label=f"{model_name} train MSE",
+        )
+        ax.plot(
+            rows["alpha"],
+            rows["validation_mse"],
+            marker="o",
+            markersize=5.5,
+            linewidth=2.0,
+            linestyle="--",
+            color=COLORS[model_name],
+            label=f"{model_name} validation MSE",
+        )
     ax.set(xscale="log", xlabel="Regularization strength (alpha)", ylabel="Mean squared error", title="Training and validation MSE by alpha")
-    ax.grid(True, linestyle="--", alpha=0.35)
-    ax.legend(fontsize=8, ncol=2)
-    fig.tight_layout()
-    fig.savefig(figures_dir / "ridge_lasso_validation_curve.png", dpi=200)
-    plt.close(fig)
+    ax.grid(axis="y", color="#D9D9D9", linewidth=0.7)
+    ax.tick_params(direction="out", length=4, width=0.8)
+    ax.legend(loc="upper left", ncol=2, columnspacing=1.2, handlelength=2.2)
+    save_figure(fig, figures_dir, "ridge_lasso_validation_curve")
 
-    fig, ax = plt.subplots(figsize=(8, 5))
+    fig, ax = plt.subplots(figsize=(7.2, 4.5))
     for model_name, rows in candidates.groupby("model", sort=False):
-        ax.plot(rows["alpha"], rows["coefficient_l2_norm"], marker="o", color=colors[model_name], label=model_name)
+        ax.plot(
+            rows["alpha"],
+            rows["coefficient_l2_norm"],
+            marker="o",
+            markersize=5.5,
+            linewidth=2.0,
+            color=COLORS[model_name],
+            label=model_name,
+        )
     ax.set(xscale="log", xlabel="Regularization strength (alpha)", ylabel="Coefficient L2 norm", title="Coefficient shrinkage by alpha")
-    ax.grid(True, linestyle="--", alpha=0.35)
-    ax.legend()
-    fig.tight_layout()
-    fig.savefig(figures_dir / "coefficient_norms.png", dpi=200)
-    plt.close(fig)
+    ax.grid(axis="y", color="#D9D9D9", linewidth=0.7)
+    ax.tick_params(direction="out", length=4, width=0.8)
+    ax.legend(loc="upper right")
+    save_figure(fig, figures_dir, "coefficient_norms")
 
     lasso_rows = candidates.loc[candidates["model"] == "Lasso"]
-    fig, ax = plt.subplots(figsize=(8, 5))
-    ax.plot(lasso_rows["alpha"], lasso_rows["nonzero_coefficient_count"], marker="o", color=colors["Lasso"])
+    fig, ax = plt.subplots(figsize=(7.2, 4.5))
+    ax.plot(
+        lasso_rows["alpha"],
+        lasso_rows["nonzero_coefficient_count"],
+        marker="o",
+        markersize=5.5,
+        linewidth=2.0,
+        color=COLORS["Lasso"],
+    )
     ax.set(xscale="log", xlabel="Regularization strength (alpha)", ylabel="Nonzero coefficients", title="Lasso sparsity by alpha", ylim=(-1, DATASET_CONFIG["n_features"] + 1))
-    ax.grid(True, linestyle="--", alpha=0.35)
-    fig.tight_layout()
-    fig.savefig(figures_dir / "lasso_sparsity.png", dpi=200)
-    plt.close(fig)
+    ax.grid(axis="y", color="#D9D9D9", linewidth=0.7)
+    ax.tick_params(direction="out", length=4, width=0.8)
+    save_figure(fig, figures_dir, "lasso_sparsity")
 
 
 def main() -> None:
