@@ -1,0 +1,3 @@
+model,selected_alpha,validation_mse,final_test_mse,coefficient_l2_norm,nonzero_coefficient_count
+Ridge,1.0,259.1249385418641,256.70292700886415,155.1716175028901,30
+Lasso,1.0,258.71684985157407,252.09547100032782,152.94849868596586,17
