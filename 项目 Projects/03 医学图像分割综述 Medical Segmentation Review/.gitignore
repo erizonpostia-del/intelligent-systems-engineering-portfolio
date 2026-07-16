@@ -1,0 +1,12 @@
+# Keep the public review source-only.
+*.pdf
+*.docx
+*.pptx
+*.ipynb
+__pycache__/
+.DS_Store
+*.log
+*.aux
+*.tmp
+*.bak
+
