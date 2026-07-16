@@ -11,3 +11,5 @@ The repository separates three metric views:
 The peak metrics are not spliced together. Standard reaches its mAP50 peak at epoch 45 and mAP50-95 peak at epoch 40; From3Class reaches them at epochs 41 and 40, respectively. Precision and recall shown for each selection are values from that same source row.
 
 The per-epoch public CSVs retain training losses, validation losses, precision, recall, mAP50, mAP50-95, and the first recorded learning-rate column. No data path, username, model artifact, or environment field is copied.
+
+The retained Ultralytics 8.4.90 metadata identifies mAP50-95 as the archived `best`-artifact fitness basis. This supports, but does not replace, the public row-selection procedure: every reported metric is selected directly from the audited CSV files.

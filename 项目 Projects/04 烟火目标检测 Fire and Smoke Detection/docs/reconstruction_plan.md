@@ -9,6 +9,6 @@ The following is a future plan, not completed work.
 5. Write a clean training pipeline rather than reusing contaminated source.
 6. Record seeds, commands, configurations, and dataset versions.
 7. Run at least 3–5 repetitions per condition.
-8. Evaluate an independent held-out split.
+8. Evaluate a newly documented, demonstrably independent holdout split.
 9. Report means, standard deviations, and confidence intervals.
 10. Publish a data card and model card after governance review.

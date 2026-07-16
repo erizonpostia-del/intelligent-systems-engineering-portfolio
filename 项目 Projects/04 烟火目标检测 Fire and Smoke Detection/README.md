@@ -18,13 +18,13 @@ I focused on this comparison because it captures a practical transfer question: 
 
 ## Dataset scope and governance
 
-The archived clean dataset contains 22,899 images and 22,899 matching YOLO label files: 16,459 training, 2,002 validation, and 4,438 held-out images. The classes are `fire`, `smoke`, `animal`, `person`, and `vehicle`.
+The archived clean dataset contains 22,899 images and 22,899 matching YOLO label files: 16,459 training images, 2,002 validation images, and 4,438 images in the archived test-designated split. The classes are `fire`, `smoke`, `animal`, `person`, and `vehicle`.
 
-The held-out split exists, but no independently audited evaluation record for it was found. All reported values in this repository come from archived configurations marked `split: val`. Data are not released because source licenses, merged-data provenance, redistribution rights, and privacy review are incomplete. In particular, person and vehicle imagery may contain faces, license plates, or surveillance contexts. See [data governance](docs/data_governance.md) for the full boundary.
+An archived test-designated split exists, but no independently audited evaluation record for it was found. All reported values in this repository come from archived configurations marked `split: val`. Data are not released because source licenses, merged-data provenance, redistribution rights, and privacy review are incomplete. In particular, person and vehicle imagery may contain faces, license plates, or surveillance contexts. See [data governance](docs/data_governance.md) for the full boundary.
 
 ## Training conditions
 
-The archived configuration evidence points to YOLO11. The sanitized comparison conditions are in [results/training_conditions.csv](results/training_conditions.csv) and summarized in [tables/training_conditions.md](tables/training_conditions.md). Environment versions, hardware details, and an independently verified source-code revision were not recoverable from the audited evidence.
+The archived configurations identify YOLO11; sanitized conditions appear in [results/training_conditions.csv](results/training_conditions.csv) and [tables/training_conditions.md](tables/training_conditions.md). Supplementary read-only evidence identifies the retained Linux GPU Docker environment: two RTX 4090 GPUs, Python 3.12.3, PyTorch 2.11.0+cu128, CUDA 12.8, cuDNN 9.19.0.56, and Ultralytics 8.4.90. It documents retained infrastructure, not complete training reproducibility.
 
 ## Audited validation results
 
@@ -35,7 +35,7 @@ The main comparison uses a pre-declared selection rule: **for each condition, re
 | Standard | 40 | 0.58295 | 0.53123 | 0.53969 | 0.31296 |
 | From3Class | 40 | 0.63734 | 0.53157 | 0.56365 | 0.32864 |
 
-For this selection rule, the archived From3Class run records higher validation mAP50 and mAP50-95. The recall difference is small, and the experiment contains only one archived run per condition. I therefore treat the result as evidence that the initialization strategy was promising in this setup, not as proof of a generally superior training procedure.
+For this selection rule, From3Class records higher validation precision and mAP values; recall differs little. With one archived run per condition and no verified evaluation of the test-designated split, I treat the initialization as promising in this setup, not as proof of a generally superior training procedure.
 
 ![Validation mAP comparison](figures/validation_map_comparison.png)
 
@@ -49,7 +49,7 @@ The final complete training epoch tells a different, complementary story. At epo
 
 ## Interpretation boundary
 
-The results are archived validation results from one recorded run per condition. No repeated-seed summary, uncertainty interval, or independent held-out-split evaluation is available in the audited materials. The appropriate interpretation is therefore limited to the observed records: under this archived setup, the From3Class condition had higher recorded validation mAP values at the documented mAP50-95 selection epoch, while precision and recall should still be read as a trade-off rather than a blanket win.
+The results are archived validation results from one recorded run per condition. No repeated-seed summary, uncertainty interval, or independent evaluation of the test-designated split is available in the audited materials. The appropriate interpretation is therefore limited to the observed records: under this archived setup, the From3Class condition had higher recorded validation mAP values at the documented mAP50-95 selection epoch, while precision and recall should still be read as a trade-off rather than a blanket win.
 
 Reconstructing the experiment changed how I think about model comparison. A small metric improvement is difficult to interpret when the evaluation protocol, repeated runs, environment versions, and data provenance are incomplete. For the public version, I chose to preserve that uncertainty rather than present the strongest available number without context.
 
@@ -62,7 +62,7 @@ python -m pip install -r requirements.txt
 python src\build_figures.py
 ```
 
-The public script regenerates the figures from audited aggregate and per-epoch CSV files. It does not reproduce model training. The archived dataset construction, original environment, checkpoint lineage, and independent held-out evaluation remain outside the reproducible scope. A clean-room route for future work is described in [docs/reconstruction_plan.md](docs/reconstruction_plan.md).
+The public script regenerates the figures from audited aggregate and per-epoch CSV files. It does not reproduce model training. The archived dataset construction, original environment, checkpoint lineage, and independent evaluation of the test-designated split remain outside the reproducible scope. A clean-room route for future work is described in [docs/reconstruction_plan.md](docs/reconstruction_plan.md).
 
 ## Repository guide
 

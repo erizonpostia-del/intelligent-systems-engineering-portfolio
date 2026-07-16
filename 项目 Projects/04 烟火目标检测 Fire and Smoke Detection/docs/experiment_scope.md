@@ -4,4 +4,15 @@ This portfolio project is an evidence-led report of archived YOLO11 fire-and-smo
 
 The evidence supports two five-class validation runs: a Standard YOLO11s initialization and a From3Class continuation from a three-class checkpoint. Each condition has one archived run. The public comparison is therefore partially controlled and single-run only.
 
-This repository is not an independent held-out benchmark, a multi-seed study, a dataset release, a weight release, a complete training repository, or an operational fire-alarm system. It reports what the surviving records support and documents what they do not establish.
+## Evaluation scope
+
+Archived validation comparison.
+
+Not included:
+
+- independent evaluation of the archived test-designated split;
+- repeated-seed evaluation;
+- production deployment;
+- real-time alarm validation.
+
+This repository is not an independent benchmark of the archived test-designated split, a multi-seed study, a dataset release, a weight release, a complete training repository, or an operational fire-alarm system. It reports what the surviving records support and documents what they do not establish.
