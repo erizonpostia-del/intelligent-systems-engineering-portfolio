@@ -37,6 +37,28 @@ The nested-CV mean outer-fold MSE was 250.3671, with a sample standard deviation
 
 These values come from one simulated configuration. They do not establish that either regularizer is generally better.
 
+## Figures
+
+The first three figures show the ordinary train/validation workflow. The test set is not swept over alpha and is therefore absent from these plots.
+
+![Training and validation MSE by alpha](figures/ridge_lasso_validation_curve.png)
+
+*Training and validation MSE across the candidate regularization strengths for Ridge and Lasso. The MSE axis is logarithmic so that the lower-error region remains readable alongside the high-alpha Lasso values.*
+
+![Coefficient shrinkage by alpha](figures/coefficient_norms.png)
+
+*Coefficient L2 norm across alpha. Ridge shrinks continuously, while Lasso can shrink the fitted coefficient vector more sharply at larger alpha values.*
+
+![Lasso sparsity by alpha](figures/lasso_sparsity.png)
+
+*The number of nonzero Lasso coefficients across alpha, showing the sparsity consequence of L1 regularization in this simulated setup.*
+
+The final figure reports the nested-CV workflow separately: its outer-fold MSE values evaluate the selection-and-fitting procedure, rather than another alpha sweep on the held-out test partition.
+
+![Nested cross-validation outer-fold results](figures/nested_cv_results.png)
+
+*Outer-fold MSE values and their mean from the five-fold nested cross-validation run.*
+
 ## Run the project
 
 Use Python 3.11+ and install the dependencies:

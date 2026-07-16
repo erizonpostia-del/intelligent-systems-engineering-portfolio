@@ -54,12 +54,10 @@ def apply_figure_style() -> None:
 
 
 def save_figure(fig: plt.Figure, figures_dir: Path, stem: str) -> None:
-    """Save identical plotted content in raster and editable vector formats."""
+    """Save the README-ready raster figure without duplicate exports."""
     fig.tight_layout()
     output_path = figures_dir / stem
     fig.savefig(output_path.with_suffix(".png"), dpi=300)
-    fig.savefig(output_path.with_suffix(".svg"))
-    fig.savefig(output_path.with_suffix(".pdf"))
     plt.close(fig)
 
 
@@ -189,7 +187,13 @@ def save_figures(candidates: pd.DataFrame, figures_dir: Path) -> None:
             color=COLORS[model_name],
             label=f"{model_name} validation MSE",
         )
-    ax.set(xscale="log", xlabel="Regularization strength (alpha)", ylabel="Mean squared error", title="Training and validation MSE by alpha")
+    ax.set(
+        xscale="log",
+        yscale="log",
+        xlabel="Regularization strength (alpha)",
+        ylabel="Mean squared error (log scale)",
+        title="Training and validation MSE by alpha",
+    )
     ax.grid(axis="y", color="#D9D9D9", linewidth=0.7)
     ax.tick_params(direction="out", length=4, width=0.8)
     ax.legend(loc="upper left", ncol=2, columnspacing=1.2, handlelength=2.2)

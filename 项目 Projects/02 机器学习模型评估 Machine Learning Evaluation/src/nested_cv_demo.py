@@ -47,13 +47,11 @@ def apply_figure_style() -> None:
     )
 
 
-def save_figure(fig: plt.Figure, figures_dir: Path, stem: str) -> None:
-    """Save identical plotted content in raster and editable vector formats."""
+def save_plot(fig: plt.Figure, figures_dir: Path, stem: str) -> None:
+    """Save the README-ready raster figure without duplicate exports."""
     fig.tight_layout()
     output_path = figures_dir / stem
     fig.savefig(output_path.with_suffix(".png"), dpi=300)
-    fig.savefig(output_path.with_suffix(".svg"))
-    fig.savefig(output_path.with_suffix(".pdf"))
     plt.close(fig)
 
 
@@ -121,7 +119,7 @@ def save_figure(results: pd.DataFrame, figures_dir: Path) -> None:
     ax.grid(axis="y", color="#D9D9D9", linewidth=0.7)
     ax.tick_params(direction="out", length=4, width=0.8)
     ax.legend(loc="upper left")
-    save_figure(fig, figures_dir, "nested_cv_results")
+    save_plot(fig, figures_dir, "nested_cv_results")
 
 
 def main() -> None:
