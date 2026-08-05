@@ -71,9 +71,9 @@ Technical review of SAM, SAM-Path, MedSAM, domain adaptation, and segmentation e
 
 ### 04 烟火目标检测 Fire and Smoke Detection
 
-YOLO-based fire and smoke detection experiments under different training conditions.
+A governed two-class fire/smoke development workflow covering dataset review, YOLO11 baseline evaluation, difficult-target diagnosis, and scene/event-aware split planning, together with a separate archived five-class YOLO11 study.
 
-不同训练条件下基于 YOLO 的烟火目标检测实验。
+面向 fire/smoke 两类识别的数据治理、YOLO11 基线评估、困难目标诊断与场景/事件独立性规划，并保留独立的归档五类 YOLO11 实验审计。
 
 ### 05 野生动物智能识别 Wildlife Monitoring
 

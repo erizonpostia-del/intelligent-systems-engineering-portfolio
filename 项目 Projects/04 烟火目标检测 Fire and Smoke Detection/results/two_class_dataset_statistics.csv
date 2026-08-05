@@ -1,0 +1,3 @@
+dataset,total_samples,train_samples,val_samples,test_designated_samples,positive_samples,negative_samples,fire_boxes,smoke_boxes
+Development v1,424,296,86,42,267,157,762,177
+Development v2,656,457,132,67,426,230,1041,332

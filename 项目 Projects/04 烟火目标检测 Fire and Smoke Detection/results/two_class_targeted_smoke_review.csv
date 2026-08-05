@@ -1,0 +1,9 @@
+outcome,count,status
+candidate samples,396,CONFIRMED
+positive,15,CONFIRMED
+full-image positives,10,CONFIRMED
+enlarged/crop positives,5,CONFIRMED
+negative,237,CONFIRMED
+ambiguous,14,CONFIRMED
+exclude,130,CONFIRMED
+smoke boxes,16,CONFIRMED
