@@ -1,29 +1,113 @@
 # Fire and Smoke Detection for Forest Monitoring
 
-*An evidence-led portfolio project covering a current two-class engineering workflow and a separate archived five-class YOLO11 comparison.*
+*An evidence-led project that evolved from an archived five-class YOLO11 comparison into a current two-class fire/smoke engineering workflow.*
 
 ## Project overview
 
-This project contains two related but non-comparable evidence scopes.
+This repository records two stages of the same broader forest-monitoring problem.
 
-| Evidence scope | Label space | Purpose | Evaluation boundary |
+The earlier stage examined how different YOLO11 initialization paths behaved in a five-class detection task. That work established the first audited experimental baseline and clarified the limits of the surviving training records. The current stage narrows the task to the two safety-critical classes, `fire` and `smoke`, and shifts the engineering focus toward data governance, class-specific failure analysis, difficult-smoke coverage, and scene/event independence.
+
+The two stages are connected by problem domain and methodology, but they are **not numerically comparable**. Their datasets, label spaces, split histories, checkpoint lineages, and evaluation protocols differ.
+
+| Stage | Label space | Main question | Role in this project |
 |---|---|---|---|
-| Current engineering development | `fire`, `smoke` | Data governance, baseline development, difficult-target diagnosis, and next-stage planning | Three retained checkpoints evaluated on the same v2 validation split |
-| Archived experimental study | `fire`, `smoke`, `animal`, `person`, `vehicle` | Audit of Standard versus From3Class YOLO11 initialization | One archived validation run per condition |
-
-The datasets, label spaces, split histories, and experimental protocols differ. Metrics from the two scopes should not be compared directly.
+| Earlier experimental foundation | `fire`, `smoke`, `animal`, `person`, `vehicle` | How did Standard and From3Class YOLO11 initialization behave under the retained five-class setup? | Establishes the initial experimental and audit framework |
+| Current engineering development | `fire`, `smoke` | How should the detector be improved when aggregate metrics can rise while smoke recall and localization quality decline? | Develops the present fire/smoke data and evaluation workflow |
 
 ---
 
-# Part I — Current two-class engineering development
+# Stage I — Earlier five-class experimental foundation
+
+## Initial experimental question
+
+The archived study asked:
+
+> Under the retained training setup, how did a standard YOLO11s initialization compare with continued training from a three-class checkpoint after moving to a five-class forest-monitoring dataset?
+
+The five classes were `fire`, `smoke`, `animal`, `person`, and `vehicle`. This was an experimental object-detection comparison, not an operational fire-warning system.
+
+Both retained conditions requested 50 epochs with image size 640, batch size 16, seed 0, and the same archived dataset path. The Standard condition started from `yolo11s.pt`; From3Class continued from an archived three-class checkpoint. Because initialization and resume state differ, the evidence supports a partially controlled comparison rather than a strict ablation.
+
+## Archived dataset and evaluation scope
+
+The retained clean dataset contains 22,899 images with matching YOLO label files:
+
+| Split | Images |
+|---|---:|
+| Train | 16,459 |
+| Validation | 2,002 |
+| Test-designated | 4,438 |
+
+No independently audited evaluation record for the test-designated split was found. The public results below therefore come from records marked `split: val`.
+
+The dataset is not released because source licences, merged-data provenance, redistribution rights, and privacy review are incomplete. Person and vehicle imagery may include faces, licence plates, or surveillance contexts. See [data governance](docs/data_governance.md).
+
+## Retained validation result
+
+The reporting rule selects, for each condition, the epoch with the highest archived validation mAP50-95. It does not combine peak values from different epochs.
+
+| Condition | Selected epoch | Precision | Recall | Validation mAP50 | Validation mAP50-95 |
+|---|---:|---:|---:|---:|---:|
+| Standard | 40 | 0.58295 | 0.53123 | 0.53969 | 0.31296 |
+| From3Class | 40 | 0.63734 | 0.53157 | 0.56365 | 0.32864 |
+
+![Archived validation mAP comparison](figures/validation_map_comparison.png)
+
+![Archived validation precision and recall comparison](figures/precision_recall_comparison.png)
+
+Under this selection rule, From3Class records higher validation precision and mAP values, while recall is nearly unchanged. With one retained run per condition and no verified evaluation of the test-designated split, the result is treated as promising in this archived setup rather than generally superior.
+
+At epoch 50, Standard records precision 0.62883, recall 0.50296, mAP50 0.53512, and mAP50-95 0.30997. From3Class records precision 0.63911, recall 0.52584, mAP50 0.54876, and mAP50-95 0.31786. Full best-epoch and final-epoch values remain available in [the archived validation table](tables/validation_results.md).
+
+![Archived Standard training progression](figures/training_progression_standard.png)
+
+![Archived From3Class training progression](figures/training_progression_from3class.png)
+
+## What this stage established
+
+The earlier study contributed more than a pair of validation scores. It established several practices that were carried into the current work:
+
+- use a declared metric-selection rule instead of reporting whichever individual values look strongest;
+- separate retained evidence from reconstruction or inference;
+- distinguish validation observations from independent benchmark claims;
+- document data provenance, privacy, contribution, and reproducibility boundaries;
+- preserve scripts that rebuild public figures from sanitized tables rather than publishing restricted assets.
+
+It also exposed limitations that a model-only comparison could not resolve: incomplete dataset provenance, one run per condition, no repeated-seed uncertainty, no independent test-designated evaluation, and insufficient visibility into class-specific failure modes.
+
+Those limitations motivated the next stage.
+
+---
+
+# Transition — From model comparison to fire/smoke engineering
+
+The current two-class track is not a direct continuation of the five-class experiment at the dataset or checkpoint level. It evolved from the same forest-monitoring problem, but narrowed the label space to `fire` and `smoke` and changed the main engineering question.
+
+Instead of asking only which initialization produces the stronger aggregate validation score, the current work asks whether the data, class behavior, split construction, and retained evidence are strong enough to support the next model decision.
+
+| Dimension | Earlier five-class study | Current two-class development |
+|---|---|---|
+| Primary purpose | Compare initialization paths | Build and diagnose a fire/smoke development baseline |
+| Label space | Five monitoring classes | Two safety-critical classes |
+| Main evidence | Archived training records | Data governance, retained checkpoints, class metrics, and review records |
+| Evaluation emphasis | Aggregate validation comparison | Same-split checkpoint evaluation and per-class behavior |
+| Main limitation exposed | Experimental and provenance incompleteness | Smoke recall, localization quality, difficult-target coverage, and split independence |
+| Relationship between stages | Methodological foundation | Present engineering track |
+
+The earlier study therefore serves as an **experimental foundation**, not as a numerical baseline for the current detector.
+
+---
+
+# Stage II — Current two-class engineering development
 
 ## Engineering objective
 
-The current development track asks a practical question:
+The current stage asks:
 
 > How should a fire/smoke detector be improved when aggregate metrics can rise while smoke recall and localization quality decline?
 
-The workflow therefore treats data governance, class-specific behavior, scene/event independence, and difficult-target review as part of model development rather than relying on one aggregate score.
+The workflow treats source-media governance, annotation review, class-specific behavior, scene/event independence, and difficult-target analysis as part of model development rather than relying on one aggregate score.
 
 ## Data governance and dataset evolution
 
@@ -31,7 +115,7 @@ The retained workflow includes source-media registration, SHA-256 exact-duplicat
 
 ![Data governance pipeline](figures/data_governance_pipeline.png)
 
-Two retained dataset manifests support the following development snapshots:
+Two retained manifests support the following development snapshots:
 
 | Dataset | Total | Train | Validation | Test-designated | Positive | Negative | Fire boxes | Smoke boxes |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -40,7 +124,7 @@ Two retained dataset manifests support the following development snapshots:
 
 ![Two-class dataset evolution](figures/two_class_dataset_evolution.png)
 
-These counts document retained development manifests. They do not constitute a public dataset release, and the test-designated subsets are not presented as independently audited benchmarks. A formal scene/event freeze for every retained version is not claimed.
+These figures describe retained development manifests. They do not constitute a public dataset release, and the test-designated subsets are not presented as independently audited benchmarks. A formal scene/event freeze for every retained version is not claimed.
 
 ## Same-split checkpoint evaluation
 
@@ -54,13 +138,13 @@ For a controlled checkpoint comparison, the retained v1, v2-640, and v2-960 `bes
 
 ![Two-class checkpoint comparison](figures/two_class_checkpoint_comparison.png)
 
-The v2-640 checkpoint increased mAP50 by 0.0091 relative to v1, but mAP50-95 decreased by 0.0109. The v2-960 checkpoint recorded lower mAP50 and mAP50-95 than v2-640. Input resolution alone therefore did not produce a stronger overall result.
+The v2-640 checkpoint increased mAP50 by 0.0091 relative to v1, but mAP50-95 decreased by 0.0109. The v2-960 checkpoint recorded lower mAP50 and mAP50-95 than v2-640. Increasing input resolution alone therefore did not produce a stronger overall result.
 
-The retained v1 training record contains 48 completed epochs from a requested 50; its selected checkpoint corresponds to epoch 33. The table above uses coherent checkpoint evaluations rather than combining the strongest value of each metric from different epochs.
+The retained v1 training record contains 48 completed epochs from a requested 50; its selected checkpoint corresponds to epoch 33. The table reports coherent checkpoint evaluations rather than combining the strongest value of each metric from different epochs.
 
-## Per-class behavior
+## Per-class behavior and baseline decision
 
-The same-split class results explain why overall recall alone is insufficient.
+The class-level results explain why overall recall alone is insufficient.
 
 | Checkpoint | Fire recall | Smoke recall | Fire mAP50-95 | Smoke mAP50-95 |
 |---|---:|---:|---:|---:|
@@ -74,7 +158,7 @@ The same-split class results explain why overall recall alone is insufficient.
 
 From v1 to v2-640, fire recall increased by 0.0751 while smoke recall decreased by 0.0411. Moving from v2-640 to v2-960 increased fire recall again but reduced smoke recall by another 0.0411. The higher overall recall at 960 is therefore driven by fire rather than a uniform improvement across both classes.
 
-Because the development objective includes smoke sensitivity and localization quality, v1 remains the retained development baseline at this snapshot.
+Because the development objective includes smoke sensitivity and localization quality, v1 remains the retained development baseline for this published snapshot.
 
 ## Training progression
 
@@ -88,7 +172,7 @@ The two v2 runs used the same dataset, so their native training curves can be co
 
 ![v2 mAP50-95 training progression](figures/v2_map50_95_training_progression.png)
 
-Training-time curve maxima are not substituted for the checkpoint evaluations reported above. A public long-format CSV is provided so the plotted progression remains inspectable.
+Training-time curve maxima are not substituted for the checkpoint evaluations reported above. A public long-format CSV is included so the plotted progression remains inspectable.
 
 ## Targeted small and distant smoke review
 
@@ -111,7 +195,7 @@ A separate 40-image Pyro-SDIS pilot produced no usable positive sample. Continue
 
 The retained diagnostic materials include full-image, crop-based, and tiled-inference analysis. However, the formal A–E category definitions and denominator are not fully reconciled: one retained summary reports A=16, B=11, C=0, D=3, and E=4, while a separate note mentions seven visually ambiguous or information-insufficient targets without establishing whether they overlap.
 
-No A–E distribution is therefore published here. The only supported public conclusion is narrower: the 960-pixel experiment did not resolve the retained small/distant-smoke limitation, and additional data review was more informative than assuming resolution alone would solve it.
+No A–E distribution is therefore published. The supported conclusion is narrower: the 960-pixel experiment did not resolve the retained small/distant-smoke limitation, and additional data review was more informative than assuming resolution alone would solve it.
 
 ## Scene and event independence
 
@@ -119,120 +203,67 @@ The workflow reviews temporal proximity, repeated camera views, physical-event o
 
 These controls reduce leakage risk; they do not prove that every retained split is an independent benchmark.
 
-## Current status and roadmap
+## Published snapshot and next steps
 
-**Completed**
+The public evidence currently supports:
 
-- Two-class YOLO11s development runs at v1-640, v2-640, and v2-960.
-- Same-v2-validation checkpoint comparison.
-- Targeted small/distant-smoke review.
-- Pyro-SDIS pilot closeout.
-- Scene/event and novelty-review work retained as development evidence.
+- two-class YOLO11s development runs at v1-640, v2-640, and v2-960;
+- a same-v2-validation checkpoint comparison;
+- class-level fire/smoke metrics;
+- targeted small/distant-smoke review;
+- Pyro-SDIS pilot closeout;
+- retained scene/event and novelty-review work as development evidence.
 
-**Not yet evidenced as complete**
+The following are not presented as complete:
 
-- Formal diversity-24 acceptance and freeze.
-- A frozen development-v3 dataset.
-- Development-v3 training.
-- Video-level evaluation.
-- Temporal confirmation, confidence hysteresis, and alert cooldown.
-- Deployment readiness.
+- formal diversity-24 acceptance and freeze;
+- a frozen development-v3 dataset;
+- development-v3 training;
+- video-level evaluation;
+- temporal confirmation, confidence hysteresis, and alert cooldown;
+- deployment readiness.
 
-**Planned model evaluation sequence**
+The next planned model-evaluation sequence is:
 
-1. YOLO26s as the next baseline.
-2. D-FINE-S as a cross-architecture challenge.
+1. YOLO26s as the next baseline;
+2. D-FINE-S as a cross-architecture challenge;
 3. RT-DETRv2-S as a stable Transformer comparison.
 
-No result is claimed for these later models until retained training and evaluation evidence is available.
+No result is claimed for these models until retained training and evaluation evidence is available.
 
 ## Reproducibility and publication boundary
 
 The public two-class materials include sanitized aggregate tables, per-class metrics, dataset statistics, training curves, and figure-generation code. They do not include source media, labels, model weights, review databases, internal paths, credentials, or unreviewed qualitative images.
 
-The figures can be rebuilt from the public CSV files:
+The two-class figures can be rebuilt from the public CSV files:
 
 ```powershell
 python src\build_two_class_figures.py
 ```
 
-The public script rebuilds figures only. It does not train, validate, or run inference.
-
----
-
-# Part II — Archived five-class YOLO11 comparison
-
-## Archived project overview
-
-The archived study is an evidence-led reconstruction of object-detection experiments in a five-class forest-monitoring setting. Its classes are `fire`, `smoke`, `animal`, `person`, and `vehicle`. It is therefore separate from the current two-class engineering workflow and is not an operational fire-warning system.
-
-The public materials were rebuilt from archived training records after an audit of run configurations and metric CSV files. They intentionally contain no dataset, image, label, video, model weight, original training source code, or internal path. The archived Python source was reported as binary-contaminated and no trusted clean backup was available. The existing [`src/build_figures.py`](src/build_figures.py) script regenerates archived-study figures from public CSV files; it does not train or evaluate a YOLO model.
-
-## Archived experimental question
-
-> Under the archived training setup, how did a standard YOLO11s initialization compare with continued training from a three-class checkpoint after moving to a five-class dataset?
-
-The evidence supports a partially controlled, single-run archived comparison, not a universal ranking. Both conditions requested 50 epochs with image size 640, batch size 16, seed 0, and the same archived five-class dataset path. The Standard condition started from `yolo11s.pt`; From3Class continued from an archived three-class checkpoint. The differing initialization and resume state prevent a strict controlled-ablation claim.
-
-## Archived dataset scope and governance
-
-The archived clean dataset contains 22,899 images and matching YOLO label files:
-
-| Split | Images |
-|---|---:|
-| Train | 16,459 |
-| Validation | 2,002 |
-| Test-designated | 4,438 |
-
-No independently audited evaluation record for the test-designated split was found. All archived-study values reported here come from configurations marked `split: val`. Data are not released because source licenses, merged-data provenance, redistribution rights, and privacy review are incomplete. Person and vehicle imagery may contain faces, licence plates, or surveillance contexts. See [data governance](docs/data_governance.md).
-
-## Archived training conditions
-
-The archived configurations identify YOLO11. Sanitized conditions are available in [results/training_conditions.csv](results/training_conditions.csv) and [tables/training_conditions.md](tables/training_conditions.md).
-
-Supplementary read-only evidence identifies a retained Linux GPU Docker environment with two RTX 4090 GPUs, Python 3.12.3, PyTorch 2.11.0+cu128, CUDA 12.8, cuDNN 9.19.0.56, and Ultralytics 8.4.90. These values document retained infrastructure, not complete training reproducibility.
-
-## Archived validation results
-
-The pre-declared rule is to report, for each condition, the epoch with the highest archived validation mAP50-95. This avoids mixing peak values from different epochs.
-
-| Condition | Selected epoch | Precision | Recall | Validation mAP50 | Validation mAP50-95 |
-|---|---:|---:|---:|---:|---:|
-| Standard | 40 | 0.58295 | 0.53123 | 0.53969 | 0.31296 |
-| From3Class | 40 | 0.63734 | 0.53157 | 0.56365 | 0.32864 |
-
-For this selection rule, From3Class records higher validation precision and mAP values; recall differs little. With one archived run per condition and no verified evaluation of the test-designated split, the initialization is treated as promising in this setup rather than generally superior.
-
-![Archived validation mAP comparison](figures/validation_map_comparison.png)
-
-![Archived validation precision and recall comparison](figures/precision_recall_comparison.png)
-
-At epoch 50, Standard records precision 0.62883, recall 0.50296, mAP50 0.53512, and mAP50-95 0.30997. From3Class records precision 0.63911, recall 0.52584, mAP50 0.54876, and mAP50-95 0.31786. Both best-epoch and final-epoch values remain available in [tables/validation_results.md](tables/validation_results.md).
-
-![Archived Standard training progression](figures/training_progression_standard.png)
-
-![Archived From3Class training progression](figures/training_progression_from3class.png)
-
-## Archived interpretation boundary
-
-The archived results contain one recorded run per condition. No repeated-seed summary, uncertainty interval, or independent test-designated-split evaluation is available. The appropriate interpretation is limited to the surviving records.
-
-A small metric difference is difficult to interpret when evaluation protocol, repeated runs, environment versions, and data provenance are incomplete. The public version preserves that uncertainty rather than presenting the strongest number without context.
-
-## Archived reproducibility boundary
-
-The archived public CSV files preserve audited aggregate and per-epoch metrics and can regenerate their figures:
+The archived five-class figures can be rebuilt from their retained public tables:
 
 ```powershell
 python -m pip install -r requirements.txt
 python src\build_figures.py
 ```
 
-This does not reproduce model training. Original dataset construction, source code, checkpoint lineage, and independent test-designated-split evaluation remain outside the reproducible scope. A clean-room route is described in [docs/reconstruction_plan.md](docs/reconstruction_plan.md).
+These scripts rebuild public figures only. They do not reproduce model training, validation, or inference.
 
 ---
 
 ## Repository guide
+
+### Earlier five-class foundation
+
+- [`results/`](results/): audited archived validation tables and per-epoch metrics.
+- [`figures/`](figures/): archived and current figures regenerated from public CSV files.
+- [`tables/`](tables/): readable condition, result, and evidence summaries.
+- [`docs/experiment_scope.md`](docs/experiment_scope.md): archived scope and non-claims.
+- [`docs/methodology.md`](docs/methodology.md): metric-selection and audit method.
+- [`docs/data_governance.md`](docs/data_governance.md): data, privacy, and leakage boundary.
+- [`docs/contribution_scope.md`](docs/contribution_scope.md): evidence-based attribution boundary.
+- [`docs/reproducibility.md`](docs/reproducibility.md): what the archived study can and cannot reproduce.
 
 ### Current two-class development
 
@@ -242,15 +273,4 @@ This does not reproduce model training. Original dataset construction, source co
 - [`results/two_class_training_curves.csv`](results/two_class_training_curves.csv): long-format native training histories.
 - [`results/two_class_targeted_smoke_review.csv`](results/two_class_targeted_smoke_review.csv): targeted review outcomes.
 - [`src/build_two_class_figures.py`](src/build_two_class_figures.py): rebuilds current-development figures from public CSV files.
-- [`docs/two_class_development_scope.md`](docs/two_class_development_scope.md): evidence and non-claim boundaries.
-
-### Archived five-class study
-
-- [`results/`](results/): audited validation tables and per-epoch metrics.
-- [`figures/`](figures/): figures regenerated from public CSV files.
-- [`tables/`](tables/): readable condition, result, and evidence summaries.
-- [`docs/experiment_scope.md`](docs/experiment_scope.md): archived scope and non-claims.
-- [`docs/methodology.md`](docs/methodology.md): metric-selection and audit method.
-- [`docs/data_governance.md`](docs/data_governance.md): data, privacy, and leakage boundary.
-- [`docs/contribution_scope.md`](docs/contribution_scope.md): evidence-based attribution boundary.
-- [`docs/reproducibility.md`](docs/reproducibility.md): what the archived study can and cannot reproduce.
+- [`docs/two_class_development_scope.md`](docs/two_class_development_scope.md): current evidence and non-claim boundaries.

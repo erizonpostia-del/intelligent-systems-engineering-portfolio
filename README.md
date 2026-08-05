@@ -1,162 +1,156 @@
 # Intelligent Systems and Engineering Portfolio
 
-# 智能系统与工程作品集
+**智能系统与工程作品集**
 
-This repository presents selected coursework, technical projects, research activities, and engineering experience related to intelligent systems and engineering.
+This repository presents a selected portfolio in robotics, machine learning, computer vision, and evidence-led engineering practice. The projects originate from university coursework, independent extensions, and engineering work, but the repository is not a raw archive of every exercise or intermediate file.
 
-本仓库用于整理与智能系统及工程相关的课程项目、技术成果、研究活动和工程实践。
+The public version is organised around four questions:
 
-It is maintained as a long-term, evidence-based portfolio and is not tied to one specific graduate programme.
+1. What problem was being solved?
+2. What work is directly supported by retained evidence?
+3. What was learned from the result or failure mode?
+4. What remains outside the reproducible or attributable scope?
 
-本仓库作为长期维护、以证据为基础的技术作品集，不绑定某一个特定研究生专业。
-
-Different application editions may later be prepared for artificial intelligence, robotics, automation, embedded systems, computer engineering, and related interdisciplinary programmes.
-
-后续可根据人工智能、机器人、自动化、嵌入式系统、计算机工程及相关交叉专业，生成不同的申请版本。
-
----
-
-## Technical Areas
-
-## 技术方向
-
-- Artificial Intelligence and Machine Learning / 人工智能与机器学习
-- Robotics and Autonomous Systems / 机器人与自主系统
-- Automation and Control / 自动化与控制
-- Embedded Systems and Computer Engineering / 嵌入式系统与计算机工程
-- Computer Vision and Intelligent Perception / 计算机视觉与智能感知
-- Engineering System Integration / 工程系统集成
+The portfolio follows a progression from automation and system engineering toward intelligent systems: robot integration and reinforcement learning, controlled machine-learning evaluation, technical review of medical segmentation, and an evolving fire/smoke detection workflow.
 
 ---
 
-## Repository Structure
+## Project map
 
-## 仓库结构
+| Project | Main focus | Public evidence scope |
+|---|---|---|
+| [01 — Robotics and DQN](项目%20Projects/01%20智能机器人与强化学习%20Robotics%20and%20DQN/) | ROS navigation, TurtleBot3 mapping, and reinforcement-learning coursework | Separates personal ROS1 simulation, team physical-robot work, and independently completed DQN coursework |
+| [02 — Machine Learning Evaluation](项目%20Projects/02%20机器学习模型评估%20Machine%20Learning%20Evaluation/) | Ridge/Lasso comparison and model-selection methodology | Reproducible evaluation pipeline with train-only standardisation, validation-based selection, and 5×3 nested cross-validation |
+| [03 — Medical Segmentation Review](项目%20Projects/03%20医学图像分割综述%20Medical%20Segmentation%20Review/) | Medical image-segmentation methods and literature synthesis | Technical review and method comparison; no model-training or reproduction claim |
+| [04 — Fire and Smoke Detection](项目%20Projects/04%20烟火目标检测%20Fire%20and%20Smoke%20Detection/) | Object detection, data governance, difficult-target diagnosis, and split independence | Connects an earlier five-class YOLO11 experiment with the current two-class fire/smoke engineering workflow |
 
-~~~text
-研究生申请作品集 Graduate Application Portfolio
-│
-├─ 作品集版本 Portfolio Editions
-├─ 项目 Projects
-├─ 研究 Research
-├─ 实习经历 Experience
-├─ 公共资源 Shared Assets
-├─ 模板 Templates
-└─ 自动化脚本 Scripts
-~~~
 
 ---
 
-## Current Projects
+## Engineering through-line
 
-## 当前项目
+Although the projects use different datasets and tools, they share a consistent working method.
 
-### 01 智能机器人与强化学习 Robotics and DQN
+### 1. Define the system boundary
 
-ROS communication, TurtleBot3 mapping and navigation, LiDAR-based control, and Double Dueling DQN training and evaluation.
+Each project states what belongs to the task and what does not. Simulation and physical-robot work are separated; literature review is not presented as model training; validation observations are not described as independent benchmark results.
 
-ROS 通信、TurtleBot3 建图导航、基于激光雷达的控制，以及 Double Dueling DQN 训练与评估。
+### 2. Build an inspectable evaluation path
 
-### 02 机器学习模型评估 Machine Learning Evaluation
+The repository favours explicit splits, train-only preprocessing, declared metric-selection rules, retained configurations, readable result tables, and scripts that rebuild public figures from sanitized data.
 
-Reproducible model selection, regularization, nested cross-validation, and evaluation workflows.
+### 3. Diagnose failure rather than report one score
 
-可复现的模型选择、正则化、嵌套交叉验证与模型评估流程。
+The projects examine model-selection instability, class-level behaviour, difficult-target coverage, evidence gaps, and data leakage risk. A stronger aggregate number is not automatically treated as a stronger engineering result.
 
-### 03 医学图像分割综述 Medical Segmentation Review
+### 4. Preserve attribution and publication boundaries
 
-Technical review of SAM, SAM-Path, MedSAM, domain adaptation, and segmentation evaluation.
-
-围绕 SAM、SAM-Path、MedSAM、领域适配与分割评价开展的技术综述。
-
-### 04 烟火目标检测 Fire and Smoke Detection
-
-A governed two-class fire/smoke development workflow covering dataset review, YOLO11 baseline evaluation, difficult-target diagnosis, and scene/event-aware split planning, together with a separate archived five-class YOLO11 study.
-
-面向 fire/smoke 两类识别的数据治理、YOLO11 基线评估、困难目标诊断与场景/事件独立性规划，并保留独立的归档五类 YOLO11 实验审计。
-
-### 05 野生动物智能识别 Wildlife Monitoring
-
-Detection, classification, data review, and system planning for forestry monitoring.
-
-面向林草监测的检测、分类、数据复核与系统方案设计。
+Team work, individual work, reconstruction, inference, and retained evidence are labelled separately. Restricted datasets, model weights, internal paths, credentials, and unreviewed private imagery are excluded from the public repository.
 
 ---
 
-## Evidence and Reproducibility
+## Portfolio snapshot
 
-## 证据与可复现性
+### 01 — Robotics and DQN
 
-Project claims are included only when they can be supported by verifiable evidence.
+The robotics project combines three distinct evidence scopes:
 
-项目成果只有在具备可核验证据时才会纳入作品集。
+- personal ROS1 simulation work in an Ubuntu virtual machine;
+- team-based TurtleBot3 physical mapping and goal-point movement in ROS2 Humble;
+- DQN coursework completed in a self-defined Python environment.
 
-- Source code / 源代码
-- Configuration files / 配置文件
-- Experiment logs / 实验日志
-- Structured results / 结构化结果
-- Evaluation figures / 评估图表
-- Demonstration images or videos / 演示图片或视频
-- Original course reports / 原始课程报告
-- Verified individual contribution statements / 经核实的个人贡献说明
+The public account does not claim continuous end-to-end autonomous navigation, unsupported obstacle-avoidance behaviour, or sole ownership of the team robot experiment.
 
----
+### 02 — Machine Learning Evaluation
 
-## Attribution and Limitations
+This project compares Ridge and Lasso under a controlled preprocessing and model-selection workflow. The public version documents validation-based hyperparameter selection, training-range standardisation, and a 5×3 nested cross-validation extension. It is the most directly reproducible statistical-learning project in the portfolio.
 
-## 归属与限制
+### 03 — Medical Segmentation Review
 
-Official packages, course templates, third-party environments, open-source components, and independently implemented code will be documented separately.
+This project is a literature- and method-level technical review of medical image segmentation. Its contribution lies in organising architectures, evaluation considerations, and application constraints. It is not described as a trained, fine-tuned, or experimentally reproduced segmentation system.
 
-官方软件包、课程模板、第三方环境、开源组件及本人独立实现的代码，将分别说明来源与个人贡献。
+### 04 — Fire and Smoke Detection
 
-Coursework completed during exchange study will be explicitly identified as exchange coursework.
+This is the most active engineering thread in the portfolio. It now presents a coherent project evolution:
 
-交换期间完成的课程项目将明确标注为交换课程经历。
+- an earlier five-class YOLO11 initialization comparison established the first audited experimental foundation;
+- the current two-class track narrows the task to `fire` and `smoke` and expands the work into source-media governance, duplicate control, annotation review, same-split checkpoint evaluation, class-specific error analysis, targeted difficult-smoke review, and scene/event-aware split planning.
 
-Confidential internship information, restricted datasets, credentials, transcripts, recommendation letters, and personal application documents are excluded from this repository.
-
-实习保密资料、受限数据集、账号凭据、成绩单、推荐信及个人申请文件不会存入本仓库。
+The published snapshot includes YOLO11s v1-640, v2-640, and v2-960 evidence. It does not claim that development-v3, video-level alert logic, or deployment readiness is complete. The next planned model sequence is YOLO26s, D-FINE-S, and RT-DETRv2-S; no public performance claim is made before retained evaluation evidence exists.
 
 ---
 
-## Current Status
+## Repository structure
 
-## 当前状态
+```text
+.
+├── README.md
+├── 项目 Projects/
+│   ├── 01 智能机器人与强化学习 Robotics and DQN/
+│   ├── 02 机器学习模型评估 Machine Learning Evaluation/
+│   ├── 03 医学图像分割综述 Medical Segmentation Review/
+│   └── 04 烟火目标检测 Fire and Smoke Detection/
+├── 研究 Research/
+├── 经历 Experience/
+├── 公共素材 Shared Assets/
+├── 模板 Templates/
+└── 脚本 Scripts/
+```
 
-This portfolio is currently under structured development.
-
-本作品集目前处于结构化整理阶段。
-
-The first stage focuses on evidence auditing, contribution verification, environment documentation, and reproducibility.
-
-第一阶段重点包括成果证据审计、个人贡献核实、实验环境记录和可复现性整理。
-
-Current priority project:
-
-当前优先整理项目：
-
-**Learning-Based Autonomous Systems with ROS and Double Dueling DQN**
-
-**基于 ROS 与 Double Dueling DQN 的学习型自主系统**
-
----
-
-## Application Editions
-
-## 申请版本
-
-- General Edition / 通用版本
-- Artificial Intelligence Edition / 人工智能版本
-- Robotics and Automation Edition / 机器人与自动化版本
-- Embedded Systems and Computer Engineering Edition / 嵌入式系统与计算机工程版本
+Not every top-level directory is expected to contain a finished public artefact. Project-specific README files are the primary entry points for evidence, methods, limitations, and reproducibility notes.
 
 ---
 
-## Personal Information
+## Technical scope
 
-## 个人信息
+The portfolio currently includes work with:
 
-Personal identifiers and private application information are intentionally excluded.
+- Python and C;
+- Linux, Git, and reproducible project organisation;
+- ROS1, ROS2, Gazebo, RViz, TurtleBot3, and Cartographer;
+- reinforcement learning and DQN;
+- scikit-learn pipelines, regularisation, validation, and nested cross-validation;
+- computer vision, YOLO-based object detection, dataset review, and error diagnosis;
+- technical literature review and engineering documentation.
 
-本仓库不公开学号、证件、成绩单、推荐信及其他私人申请信息。
+This list describes demonstrated project scope, not a claim of equal depth across every tool.
+
+---
+
+## Evidence and attribution policy
+
+The repository uses the following conventions:
+
+- **Individual work** is identified when the retained evidence supports individual completion.
+- **Team work** states the team setting and the specific personal contribution.
+- **Archived evidence** is preserved as a bounded historical result rather than rewritten as a fully reproducible experiment.
+- **Reconstructed material** is labelled when original source files are incomplete or unavailable.
+- **Planned work** is separated from completed work.
+- **Private or restricted assets** are not published merely to make the repository appear more complete.
+
+For this reason, some projects contain aggregate tables and regeneration scripts but exclude datasets, weights, raw images, videos, internal logs, or environment-specific paths.
+
+---
+
+## Reading order
+
+For a concise review of the portfolio:
+
+1. Start with [Project 01](项目%20Projects/01%20智能机器人与强化学习%20Robotics%20and%20DQN/) for robotics integration and contribution boundaries.
+2. Read [Project 02](项目%20Projects/02%20机器学习模型评估%20Machine%20Learning%20Evaluation/) for the clearest reproducible evaluation workflow.
+3. Use [Project 03](项目%20Projects/03%20医学图像分割综述%20Medical%20Segmentation%20Review/) as the literature and method-synthesis example.
+4. Finish with [Project 04](项目%20Projects/04%20烟火目标检测%20Fire%20and%20Smoke%20Detection/) for the most developed data-governance and computer-vision engineering workflow.
+
+---
+
+## Scope of the public repository
+
+This repository is a technical portfolio, not a production software release. Unless a project README explicitly states otherwise, the materials should not be interpreted as:
+
+- a deployable safety system;
+- an independently audited benchmark;
+- a complete release of the original dataset or training environment;
+- proof that all planned extensions have been completed;
+- evidence that team outcomes were produced by one person alone.
+
+The goal is to make the supported engineering work inspectable without expanding claims beyond the retained evidence.
