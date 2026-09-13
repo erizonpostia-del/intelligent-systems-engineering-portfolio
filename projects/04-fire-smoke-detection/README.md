@@ -2,6 +2,8 @@
 
 *An evidence-led project that evolved from an archived five-class YOLO11 comparison into a current two-class fire/smoke engineering workflow.*
 
+**Quick visual walkthrough:** [Evidence-led project overview](OVERVIEW.md)
+
 ## Project overview
 
 This repository records two stages of the same broader forest-monitoring problem.

@@ -2,6 +2,8 @@
 
 This project presents two related but independent workstreams: robotics systems engineering and learning-based control. They are kept separate because the ROS work and the FlappyBird DQN work are not one end-to-end system.
 
+**Quick visual walkthrough:** [Evidence-led project overview](OVERVIEW.md)
+
 ## Executive view
 
 | Workstream | Retained evidence | My role | Boundary |

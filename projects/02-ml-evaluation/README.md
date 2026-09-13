@@ -2,6 +2,8 @@
 
 I built this project to work through two parts of regression evaluation that are easy to get wrong in a small experiment: choosing hyperparameters without consulting the test set, and estimating the performance of the whole selection procedure rather than one fitted model. The data are generated at runtime with `sklearn.datasets.make_regression`, so the repository is self-contained and does not represent a real business or scientific prediction task.
 
+**Quick visual walkthrough:** [Evidence-led project overview](OVERVIEW.md)
+
 ## What I implemented
 
 I compared Ridge (L2) and Lasso (L1) regression across six alpha values: 0.001, 0.01, 0.1, 1.0, 10.0, and 100. I recorded training and validation MSE, coefficient L2 norm, and the number of nonzero coefficients. This lets me examine the error trade-off alongside the different ways the two penalties shrink coefficients.

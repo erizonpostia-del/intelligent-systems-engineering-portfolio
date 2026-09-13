@@ -2,6 +2,8 @@
 
 > A literature-based technical review of foundation models for medical image segmentation, with a focused discussion of SAM, digital-pathology adaptation, MedSAM, prompting, domain shift, and evaluation.
 
+**Quick visual walkthrough:** [Evidence-led project overview](OVERVIEW.md)
+
 ## Project overview
 
 This repository is a technical review, not an experimental report. I organized it around a practical question: which parts of a promptable natural-image foundation model transfer to medical imaging, and which parts require domain-specific adaptation? It contains my synthesis, original schematics, comparison tables, and a bounded inference plan—not patient data, checkpoints, training, fine-tuning, or project-computed segmentation metrics.
