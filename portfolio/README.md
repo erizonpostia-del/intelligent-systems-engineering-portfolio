@@ -1,6 +1,6 @@
 # Portfolio navigation
 
-This layer helps a reviewer choose a short reading path. It selects and ranks links to the four canonical projects; it does not duplicate their methods, results, or claims.
+This page provides short reading paths through the four canonical projects, organised by technical direction and programme relevance.
 
 ## Application tracks
 

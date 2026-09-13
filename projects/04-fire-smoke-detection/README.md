@@ -19,7 +19,7 @@ The two stages are connected by problem domain and methodology, but they are **n
 
 ## Executive view
 
-| Item | Reviewer-facing summary |
+| Item | Summary |
 |---|---|
 | **Problem** | Improve a forest-monitoring detector without mistaking a higher aggregate score for uniform fire/smoke performance. |
 | **My role** | Rechecked retained records, separated evaluation contexts, prepared public tables and figures, and documented data-governance and contribution boundaries. The archive does not assign every remote training action to one person. |

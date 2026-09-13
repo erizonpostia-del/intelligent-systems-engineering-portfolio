@@ -1,8 +1,10 @@
 # Intelligent Systems Engineering Portfolio
 
-An admissions-oriented portfolio at the intersection of automation and systems engineering, intelligent systems, perception, and learning.
+A technical portfolio at the intersection of automation and systems engineering, intelligent systems, perception, and learning.
 
-I build and evaluate engineering workflows across robotics, statistical learning, computer vision, and technical review. The common thread is system thinking: connect software, sensing, algorithms, and evidence; then state clearly what the retained material does and does not prove.
+**Jiang ZhengMeng** — Undergraduate student in the Bachelor of Science in Automation and Systems Engineering programme, Faculty of Innovation Engineering, Macau University of Science and Technology (MUST).
+
+I build and evaluate engineering workflows across robotics, statistical learning, computer vision, and technical review. The common thread is system thinking: connecting software, sensing, algorithms, and evidence while keeping technical claims tied to their supporting results.
 
 ## Choose a reading path
 
@@ -12,7 +14,7 @@ I build and evaluate engineering workflows across robotics, statistical learning
 | AI for Science / Health | 03 → 02 → 04 | [AI for Science / Health](portfolio/tracks/ai-for-science-health.md) |
 | AI Innovation / Deployment | 04 → 02 → 01 | [AI Innovation / Deployment](portfolio/tracks/ai-innovation-deployment.md) |
 
-Programme-specific reading guides are collected in [`portfolio/programs/`](portfolio/programs/). They are navigation aids, not personal statements.
+Programme-specific reading guides highlight the most relevant projects for each application direction.
 
 ## Selected projects
 

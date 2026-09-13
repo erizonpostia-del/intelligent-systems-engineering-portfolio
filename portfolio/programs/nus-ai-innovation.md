@@ -6,7 +6,7 @@
 2. [02 — Machine Learning Evaluation](../../projects/02-ml-evaluation/) — shows disciplined model selection with train-only preprocessing, held-out testing, and nested CV.
 3. [01 — Robotics & DQN](../../projects/01-robotics-dqn/) — shows system integration across ROS, sensing, navigation, and learning-based control.
 
-These links are selected for evidence of engineering judgement and cross-layer integration. They are not a claim about programme admissions criteria beyond the programme name supplied for this guide.
+Together, these projects foreground engineering judgement, evaluation discipline, and cross-layer integration.
 
 ## Evidence boundary
 

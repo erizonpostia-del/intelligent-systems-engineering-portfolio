@@ -6,7 +6,7 @@
 2. [04 — Fire & Smoke Detection](../../projects/04-fire-smoke-detection/) — demonstrates perception workflow design and error-aware engineering decisions.
 3. [02 — Machine Learning Evaluation](../../projects/02-ml-evaluation/) — demonstrates controlled comparisons and nested model-selection evaluation.
 
-The selected path is intended to make the systems-and-learning trajectory legible in a short review.
+Together, these projects connect robotics systems, perception, and learning-based evaluation.
 
 ## Evidence boundary
 

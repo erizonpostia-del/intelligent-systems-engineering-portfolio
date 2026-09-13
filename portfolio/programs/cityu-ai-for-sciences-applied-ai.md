@@ -1,12 +1,15 @@
-# CityUHK — MSc Artificial Intelligence for Sciences, Applied AI
+# CityUHK — MSc Artificial Intelligence for Sciences
+
+## Track 4: Applied AI
 
 ## Priority portfolio items
 
-1. [03 — Medical Segmentation Review](../../projects/03-medical-segmentation-review/) — shows science-facing literature analysis and careful interpretation of medical-AI evidence.
-2. [04 — Fire & Smoke Detection](../../projects/04-fire-smoke-detection/) — shows applied computer-vision engineering from data governance through class-specific diagnosis.
-3. [02 — Machine Learning Evaluation](../../projects/02-ml-evaluation/) — shows transparent preprocessing and nested-CV evaluation.
+1. [04 — Fire & Smoke Detection](../../projects/04-fire-smoke-detection/) — applied computer-vision engineering, data governance, class-level diagnosis, and model-development decisions.
+2. [01 — Robotics & DQN](../../projects/01-robotics-dqn/) — robotics integration, LiDAR/navigation evidence, learning experiments, and embodied-system context.
+3. [03 — Medical Segmentation Review](../../projects/03-medical-segmentation-review/) — domain-aware analysis of medical imaging, foundation-model adaptation, and evaluation evidence.
+4. [02 — Machine Learning Evaluation](../../projects/02-ml-evaluation/) — reproducible preprocessing, model selection, held-out testing, and nested cross-validation.
 
-These links provide a compact view of scientific reasoning, applied AI, and evaluation discipline.
+Together, these projects provide applied-AI evidence across perception, embodied systems, medical-AI analysis, and reproducible evaluation.
 
 ## Evidence boundary
 

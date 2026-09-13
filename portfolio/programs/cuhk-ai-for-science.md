@@ -6,7 +6,7 @@
 2. [02 — Machine Learning Evaluation](../../projects/02-ml-evaluation/) — demonstrates reproducible evaluation design and sensitivity to selection uncertainty.
 3. [04 — Fire & Smoke Detection](../../projects/04-fire-smoke-detection/) — demonstrates applied visual inference, data governance, and failure-oriented investigation.
 
-The links emphasise how the applicant frames evidence before making a model or domain claim.
+Together, these projects foreground technical literature synthesis, evaluation discipline, and domain-aware interpretation.
 
 ## Evidence boundary
 
