@@ -23,7 +23,7 @@ Public ROS package: `src/robotics/tb3_course_task`.
 
 ## Attribution and privacy
 
-Code provenance and contribution boundaries are recorded in `docs/代码来源与归属 Code Attribution.md`. Public copies have no recovered personal maintainer identifier or private absolute map paths. Selected screenshots were cropped rather than altered in meaning.
+Code provenance and contribution boundaries are recorded in [code-attribution.md](code-attribution.md). Public copies have no recovered personal maintainer identifier or private absolute map paths. Selected screenshots were cropped rather than altered in meaning.
 
 ## Known Limitations
 

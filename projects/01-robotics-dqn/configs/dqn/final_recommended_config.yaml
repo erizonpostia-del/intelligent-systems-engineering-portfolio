@@ -31,6 +31,6 @@
     202607154,
     202607155
   ],
-  "validation_seed_manifest": "configs/runs/validation_seeds_20.json",
-  "test_seed_manifest": "configs/runs/standard_test_seeds_100.json"
+  "validation_seed_manifest": "configs/dqn/runs/validation_seeds_20.json",
+  "test_seed_manifest": "configs/dqn/runs/standard_test_seeds_100.json"
 }

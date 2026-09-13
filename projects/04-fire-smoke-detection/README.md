@@ -17,6 +17,20 @@ The two stages are connected by problem domain and methodology, but they are **n
 
 ---
 
+## Executive view
+
+| Item | Reviewer-facing summary |
+|---|---|
+| **Problem** | Improve a forest-monitoring detector without mistaking a higher aggregate score for uniform fire/smoke performance. |
+| **My role** | Rechecked retained records, separated evaluation contexts, prepared public tables and figures, and documented data-governance and contribution boundaries. The archive does not assign every remote training action to one person. |
+| **Scale** | Earlier five-class archive: 22,899 images. Current two-class development manifests: 424 images (v1) and 656 images (v2). |
+| **Technical workflow** | Source-media and duplicate review → annotation and scene/event checks → same-split checkpoint evaluation → per-class diagnosis → targeted difficult-smoke review → next-model planning. |
+| **Key findings** | v2-640 raised mAP50 over v1 by 0.0091 but lowered mAP50-95 by 0.0109; v2-960 further reduced smoke recall and did not improve the overall result. |
+| **Engineering outcome** | Retain v1 as the published development baseline because the higher overall recall at 960 was driven by fire, not a uniform improvement across both classes. |
+| **Evidence boundary** | Validation/development evidence only: no released dataset, independently audited test benchmark, video-level alert evaluation, or deployment-readiness claim. |
+
+---
+
 # Stage I — Earlier five-class experimental foundation
 
 ## Initial experimental question

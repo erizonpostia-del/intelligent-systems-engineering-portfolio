@@ -14,4 +14,4 @@ I independently completed the DQN implementation and experimental workflow for t
 
 ## Attribution boundary
 
-Course guidance and third-party components remain attributed. I do not claim a new navigation stack, a novel DQN algorithm, or complete autonomous physical deployment. See [Code attribution](%E4%BB%A3%E7%A0%81%E6%9D%A5%E6%BA%90%E4%B8%8E%E5%BD%92%E5%B1%9E%20Code%20Attribution.md) and [DQN attribution](DQN%20%E4%BB%A3%E7%A0%81%E6%9D%A5%E6%BA%90%E4%B8%8E%E8%B4%A1%E7%8C%AE%20DQN%20Attribution.md).
+Course guidance and third-party components remain attributed. I do not claim a new navigation stack, a novel DQN algorithm, or complete autonomous physical deployment. See [code attribution](code-attribution.md) and [DQN attribution](dqn-attribution.md).

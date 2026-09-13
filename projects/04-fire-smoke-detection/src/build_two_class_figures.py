@@ -300,6 +300,11 @@ def main() -> int:
         action="store_true",
         help="Check expected input files without writing figures.",
     )
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="Alias for --dry-run for publication QA.",
+    )
     args = parser.parse_args()
 
     required = [
@@ -315,7 +320,7 @@ def main() -> int:
             LOG.error("Missing input: %s", path)
         return 1
 
-    if args.dry_run:
+    if args.dry_run or args.check:
         print("Inputs found. Figures would be written to:", FIGURES)
         return 0
 

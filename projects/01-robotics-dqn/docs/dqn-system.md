@@ -16,4 +16,4 @@ The controlled study compares Vanilla DQN, Double DQN, Dueling DQN, and Double D
 
 The later studies use fixed training seeds, validation-based checkpoint selection, held-out test seeds, parameter-hash checks during final evaluation, and CSV summaries. This structure prevents the test set from driving model selection.
 
-See [training and evaluation](DQN%20%E8%AE%AD%E7%BB%83%E4%B8%8E%E8%AF%84%E4%BC%B0%20DQN%20Training%20and%20Evaluation.md) and [ablation study](DQN%20%E6%B6%88%E8%9E%8D%E5%AE%9E%E9%AA%8C%20DQN%20Ablation%20Study.md).
+See [training and evaluation](dqn-training-and-evaluation.md) and [ablation study](dqn-ablation-study.md).

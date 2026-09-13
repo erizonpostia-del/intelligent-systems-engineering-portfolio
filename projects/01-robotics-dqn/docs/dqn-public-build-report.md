@@ -4,4 +4,4 @@ The public DQN workstream is built from audited summary artifacts rather than ra
 
 The public source subset is intentionally smaller than the private archive. Historical training and evaluation entry scripts were not retained as public defaults because they reference historical output flow or checkpoints. The documented components remain available for inspection without a default command that writes into published result directories.
 
-The 2026-07-16 cleanup retained the verified CSV-derived figures and reorganized their public assets. The canonical public directories are `src/dqn`, `configs/强化学习 DQN Reinforcement Learning`, `results/dqn`, and `figures/dqn`.
+The 2026-07-16 cleanup retained the verified CSV-derived figures and reorganized their public assets. The canonical public directories are `src/dqn`, `configs/dqn`, `results/dqn`, and `figures/dqn`.
