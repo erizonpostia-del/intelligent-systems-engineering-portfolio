@@ -1,15 +1,21 @@
-# HKUST — MSc AI & Entrepreneurship
+# HKUST — MSc in AI and Entrepreneurship
 
-## Priority portfolio items
+**Jiang ZhengMeng | Automation and Systems Engineering, Macau University of Science and Technology**
 
-1. [04 — Fire & Smoke Detection](../../projects/04-fire-smoke-detection/) — shows how a problem framing evolves from a model comparison into data, evaluation, and next-step decisions.
-2. [02 — Machine Learning Evaluation](../../projects/02-ml-evaluation/) — shows why a small result needs honest split and selection logic before it can support a product claim.
-3. [01 — Robotics & DQN](../../projects/01-robotics-dqn/) — shows integration across software, sensing, robot interfaces, and learning experiments.
+My relevant preparation is **engineering evaluation and applied technical decision-making**. It is not a startup portfolio: I have not established commercial adoption, venture fundraising, or verified customer outcomes in the published evidence.
 
-The reading order highlights problem definition, evidence quality, and integration work.
+## What to read first
 
-## Evidence boundary
+| Priority | Direct evidence | Interpretation |
+|---|---|---|
+| **04 — Fire & Smoke Detection** | [Visual overview](../../projects/04-fire-smoke-detection/OVERVIEW.md) · [development-scope note](../../projects/04-fire-smoke-detection/docs/two_class_development_scope.md) | A practical detection problem where better data curation and class-sensitive evaluation matter more than a headline benchmark |
+| **02 — Machine Learning Evaluation** | [Visual overview](../../projects/02-ml-evaluation/OVERVIEW.md) · [nested CV implementation](../../projects/02-ml-evaluation/src/nested_cv_demo.py) | Why selection and validation discipline precede claims of solution reliability |
+| **01 — Robotics & DQN** | [Visual overview](../../projects/01-robotics-dqn/OVERVIEW.md) · [attribution](../../projects/01-robotics-dqn/docs/contributions.md) | Integrating sensing, software, and robotics interfaces; testing established learning architectures separately |
 
-No page here claims a product, commercial validation, or deployment readiness. Project 04 has unresolved data-licensing and independence limitations; Project 02 is synthetic; Project 01 includes team-owned physical work.
+## Fit and growth areas
 
-[Back to portfolio navigation](../README.md)
+HKUST's curriculum links **AI programming and methods** with **innovation management, entrepreneurship and a supervised applied experience**. I can contribute hands-on evidence around technical feasibility, validation trade-offs, and limitations of AI systems. I want to develop the skills that are not yet demonstrated here: market discovery, stakeholder interviews, product design, customer validation, responsible deployment, and technical-to-commercial execution.
+
+**Evidence safeguards:** the forest-monitoring detector is **not production-ready**, and the historical shared-server record cannot attribute every action to one person; regression data are **synthetic**; ROS1 results are **simulation-only**, the physical TurtleBot3 exercise was a **team outcome**, and DQN ran in **FlappyBird-v0**.
+
+[Official HKUST programme (2026–27 catalogue)](https://prog-crs.hkust.edu.hk/pgprog/2026-27/msc-aie) · [AI Innovation / Deployment track](../tracks/ai-innovation-deployment.md) · [Portfolio homepage](../../README.md)
