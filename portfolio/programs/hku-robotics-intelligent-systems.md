@@ -1,15 +1,26 @@
-# HKU — MSc(Eng) Robotics & Intelligent Systems
+# HKU — MSc(Eng) in Robotics and Intelligent Systems
 
-## Priority portfolio items
+**Jiang ZhengMeng | Automation and Systems Engineering, Macau University of Science and Technology**
 
-1. [01 — Robotics & DQN](../../projects/01-robotics-dqn/) — demonstrates robotics software, LiDAR-based control, navigation interfaces, team physical deployment context, and DQN evaluation.
-2. [04 — Fire & Smoke Detection](../../projects/04-fire-smoke-detection/) — demonstrates perception workflow design and error-aware engineering decisions.
-3. [02 — Machine Learning Evaluation](../../projects/02-ml-evaluation/) — demonstrates controlled comparisons and nested model-selection evaluation.
+A technical reading guide for a robotics programme emphasizing **modelling, sensing, planning, control, intelligence, and integration**.
 
-Together, these projects connect robotics systems, perception, and learning-based evaluation.
+## Priority evidence
 
-## Evidence boundary
+| Read | Direct evidence | Connection to the programme |
+|---|---|---|
+| **01 — Robotics & DQN** | [Visual walkthrough](../../projects/01-robotics-dqn/OVERVIEW.md) · [ROS1 simulation](../../projects/01-robotics-dqn/docs/ros1-simulation.md) · [team physical contribution](../../projects/01-robotics-dqn/docs/team-physical-deployment.md) | ROS-based navigation, LiDAR, and software/hardware integration; a separate controlled learning experiment |
+| **04 — Fire & Smoke Detection** | [Visual walkthrough](../../projects/04-fire-smoke-detection/OVERVIEW.md) · [checkpoint evidence](../../projects/04-fire-smoke-detection/results/two_class_checkpoint_metrics.csv) | Perception engineering, error analysis, model limits, and repeatable development decisions |
+| **02 — Machine Learning Evaluation** | [Visual walkthrough](../../projects/02-ml-evaluation/OVERVIEW.md) · [experiment code](../../projects/02-ml-evaluation/src/ridge_lasso_experiment.py) | Explicit model-selection discipline and held-out evaluation, not an applied robotics benchmark |
 
-Project 01 does not claim a combined ROS–FlappyBird system or a complete autonomous physical mission. Project 04 is not deployment-ready. Project 02 is a controlled synthetic experiment.
+## Fit and intended development
 
-[Back to portfolio navigation](../README.md)
+My undergraduate systems-engineering background supports the connection among sensors, communication, control interfaces, and software. The ROS example provides evidence of **using** navigation components; it does **not** demonstrate invention of a novel planner. HKU's broader emphasis on robot modelling, control, collaborative integration, and applied projects identifies areas where I want more advanced, physical-system experience.
+
+## Evidence boundaries
+
+- The nine-waypoint navigation sequence is from **personal ROS1 simulation**.
+- Physical TurtleBot3 work was **team-based** and is attributed accordingly.
+- DQN results are from **FlappyBird-v0**, not physical robot control.
+- Fire/smoke checkpoints have **development/validation** limitations; Project 02 is **synthetic**.
+
+[Official HKU programme](https://www.dase.hku.hk/teaching-and-learning/prospective-students/master-of-science-in-engineering-in-robotics-and-intelligent-systems) · [Robotics track](../tracks/robotics-intelligent-systems.md) · [Portfolio homepage](../../README.md)
