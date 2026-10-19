@@ -1,15 +1,21 @@
-# NTU — MSc Robotics & Intelligent Systems
+# NTU — MSc (Robotics and Intelligent Systems)
 
-## Priority portfolio items
+**Jiang ZhengMeng | Automation and Systems Engineering, Macau University of Science and Technology**
 
-1. [01 — Robotics & DQN](../../projects/01-robotics-dqn/) — covers ROS1/Gazebo navigation, LiDAR processing, TurtleBot3 team integration, and learning-based control.
-2. [04 — Fire & Smoke Detection](../../projects/04-fire-smoke-detection/) — demonstrates perception engineering, difficult-target diagnosis, and data/split governance.
-3. [02 — Machine Learning Evaluation](../../projects/02-ml-evaluation/) — provides a compact example of leakage-aware evaluation and nested CV.
+This is the evidence-oriented reading path for the **August 2027** programme. The primary evidence is robotics system integration, followed by perception and experimental methods.
 
-The sequence moves from robot systems to perception and then to evaluation methodology.
+## Start with these projects
 
-## Evidence boundary
+| Priority | Inspect | My work and what the evidence supports |
+|---|---|---|
+| **01 — Robotics & DQN** | [Visual overview](../../projects/01-robotics-dqn/OVERVIEW.md) · [ROS1 result](../../projects/01-robotics-dqn/results/robotics/multi-waypoint-navigation/result-summary.md) · [DQN ablation](../../projects/01-robotics-dqn/docs/dqn-ablation-study.md) | Implemented personal LiDAR/waypoint work using ROS1, Gazebo, RViz, and `move_base`; participated in team ROS2/TurtleBot3 hardware/networking/navigation exercises; independently evaluated DQN variants in a **separate FlappyBird task** |
+| **04 — Fire & Smoke Detection** | [Visual overview](../../projects/04-fire-smoke-detection/OVERVIEW.md) · [per-class evaluation](../../projects/04-fire-smoke-detection/results/two_class_per_class_metrics.csv) | Data-aware computer-vision evaluation and difficult-target diagnosis, a useful adjacent perception skill |
+| **02 — Machine Learning Evaluation** | [Visual overview](../../projects/02-ml-evaluation/OVERVIEW.md) | Reproducible ML experiments using fixed splits, leakage-aware preprocessing, and nested CV |
 
-The physical TurtleBot result is team-based, while the nine-goal ROS1 result is simulated. Project 04 reports development evidence only. Project 02 uses synthetic data and is not a robotics-domain study.
+## Fit and growth areas
 
-[Back to portfolio navigation](../README.md)
+NTU's programme stresses **robotics engineering, autonomous systems, embodied intelligence, and hands-on integration**. My ROS projects are the closest match, and the DQN work shows an interest in learning-based decisions without claiming robot-policy deployment. I hope to deepen motion planning, dynamic modelling, advanced control, physical-platform testing, and cross-layer robustness.
+
+**Boundaries:** nine-waypoint success was recorded in a **simulation**, not on the physical TurtleBot. The physical exercise was **team work**, not a sole-built autonomous system. The DQN environment was **FlappyBird-v0**. Fire/smoke results remain **development/validation-only**, and Project 02 uses synthetic regression data.
+
+[Official NTU programme](https://www.ntu.edu.sg/mae/admissions/programmes/graduate-programmes/detail/master-of-science-(robotics-and-intelligent-systems)) · [Robotics track](../tracks/robotics-intelligent-systems.md) · [Portfolio homepage](../../README.md)
