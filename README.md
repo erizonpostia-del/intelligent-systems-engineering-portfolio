@@ -6,6 +6,12 @@ A technical portfolio at the intersection of automation and systems engineering,
 
 I build and evaluate engineering workflows across robotics, statistical learning, computer vision, and technical review. The common thread is system thinking: connecting software, sensing, algorithms, and evidence while keeping technical claims tied to their supporting results.
 
+## PolyU 2027 application — Intelligent Robotics Engineering
+
+**Direct programme reading guide:** [PolyU MSc Intelligent Robotics Engineering — selected evidence](portfolio/programs/polyu-intelligent-robotics.md)
+
+For this application, start with **01 Robotics & DQN**, continue with **04 Fire & Smoke Detection**, and use **02 Machine Learning Evaluation** for experimental-method evidence. The programme guide separates ROS1 simulation, team TurtleBot3 work, independent FlappyBird DQN evaluation, and development-only computer-vision results. It includes direct links to supporting source, metrics, and limitations.
+
 ## Choose a reading path
 
 | Application direction | Suggested order | Start here |
