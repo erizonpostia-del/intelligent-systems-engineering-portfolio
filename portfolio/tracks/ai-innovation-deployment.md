@@ -1,11 +1,23 @@
 # AI Innovation / Deployment
 
-Recommended reading order for applied AI engineering and system development:
+**Focus:** what it takes to evaluate an AI opportunity as an engineering problem: data provenance, technical feasibility, model reliability, attribution, and integration constraints.
 
-1. [04 — Fire & Smoke Detection](../../projects/04-fire-smoke-detection/) — end-to-end development framing from data governance to error diagnosis and next-model decisions.
-2. [02 — Machine Learning Evaluation](../../projects/02-ml-evaluation/) — controlled evaluation, leakage avoidance, and honest uncertainty about model selection.
-3. [01 — Robotics & DQN](../../projects/01-robotics-dqn/) — software–sensing integration and learning-based control evidence.
+## Two-minute evidence path
 
-Together, these projects highlight engineering judgement across data, models, evaluation, and system integration.
+1. **[04 — Fire & Smoke Detection](../../projects/04-fire-smoke-detection/OVERVIEW.md)**: evolving problem framing from an archived comparison to class-sensitive error diagnosis, development dataset curation, and evidence-led next steps.
+2. **[02 — Machine Learning Evaluation](../../projects/02-ml-evaluation/OVERVIEW.md)**: evaluation design and avoidance of misleading selection/test practices.
+3. **[01 — Robotics & DQN](../../projects/01-robotics-dqn/OVERVIEW.md)**: contrasting software/sensing interfaces and a separate reinforcement-learning experiment.
 
-[Back to portfolio navigation](../README.md)
+The underlying theme is **engineering judgement before claims of readiness or value**. These are project and research-evidence examples, not commercial case studies.
+
+## Related 2027 programme guides
+
+- [NUS — Artificial Intelligence & Innovation](../programs/nus-ai-innovation.md): AI evaluation, innovation management, and responsible application.
+- [HKUST — AI and Entrepreneurship](../programs/hkust-ai-entrepreneurship.md): technical feasibility as a starting point for product, venture, and stakeholder skills.
+- [CityUHK — Artificial Intelligence for Sciences, Track 4 Applied AI](../programs/cityu-ai-for-sciences-applied-ai.md): applied perception and embodied-system evidence.
+
+## Evidence boundaries
+
+No revenue, customer traction, established startup, production detector, independent benchmark, or end-to-end autonomous robotic product is claimed. Five-class and two-class fire/smoke studies have different evaluation settings; team and individual responsibilities are distinct.
+
+[All programme guides](../README.md) · [Portfolio homepage](../../README.md)
