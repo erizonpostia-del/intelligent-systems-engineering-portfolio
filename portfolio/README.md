@@ -24,8 +24,13 @@ This directory helps readers jump to the **most relevant evidence**, not just th
 | **HKUST** | AI and Entrepreneurship | [Read HKUST innovation evidence](programs/hkust-ai-entrepreneurship.md) |
 | **PolyU** | Intelligent Robotics Engineering | [Read PolyU robotics evidence](programs/polyu-intelligent-robotics.md) |
 | **CityUHK** | Artificial Intelligence for Sciences · preferred Track 4: Applied AI | [Read CityU applied-AI evidence](programs/cityu-ai-for-sciences-applied-ai.md) |
+| **University of Macau (UM)** | Computer Science | [Read UM Computer Science evidence](programs/um-computer-science.md) |
+| **University of Macau (UM)** | Artificial Intelligence | [Read UM Artificial Intelligence evidence](programs/um-artificial-intelligence.md) |
+| **CUHK-Shenzhen** | Computer Science | [Read CUHK-Shenzhen Computer Science evidence](programs/cuhksz-computer-science.md) |
+| **CUHK-Shenzhen** | Artificial Intelligence · Agentic AI direction | [Read CUHK-Shenzhen Agentic AI evidence](programs/cuhksz-ai-agentic-ai.md) |
+| **HKUST (Guangzhou)** | Data-Centric Artificial Intelligence Technology | [Read HKUST(GZ) Data-Centric AI evidence](programs/hkustgz-data-centric-ai.md) |
 
-These are the **eight programmes currently represented in this portfolio**, not a statement that every application has been submitted or that the list covers all future options.
+These are the **thirteen programme-specific reading guides currently represented in this portfolio**, not a statement that every application has been submitted or that the list covers all future options.
 
 ## The four primary project sources
 

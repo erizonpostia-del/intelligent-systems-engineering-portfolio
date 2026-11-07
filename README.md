@@ -8,7 +8,7 @@ I work on the engineering questions that sit between an algorithm and a trustwor
 
 ## Start here — find your programme (2027 intake)
 
-The same four projects support different interests. Each guide prioritises **specific evidence and attribution**, with a short explanation of its fit and limitations. The eight pages below reflect my current programme-focused portfolio and are **not** claims that every application has been submitted.
+The same four projects support different interests. Each guide prioritises **specific evidence and attribution**, with a short explanation of its fit and limitations. The thirteen guides below are programme-specific ways to read the same verified projects; they are **not** claims that each application has been submitted or that every programme outcome has been achieved.
 
 | University | MSc programme / focus | Application reading guide |
 |---|---|---|
@@ -20,6 +20,11 @@ The same four projects support different interests. Each guide prioritises **spe
 | **HKUST** | AI and Entrepreneurship | [Applied AI and feasibility](portfolio/programs/hkust-ai-entrepreneurship.md) |
 | **PolyU** | Intelligent Robotics Engineering | [Robotics engineering — selected evidence](portfolio/programs/polyu-intelligent-robotics.md) |
 | **CityUHK** | Artificial Intelligence for Sciences · intended Track 4: Applied AI | [Applied AI and embodied systems](portfolio/programs/cityu-ai-for-sciences-applied-ai.md) |
+| **University of Macau (UM)** | Computer Science | [Software systems and ML evidence](portfolio/programs/um-computer-science.md) |
+| **University of Macau (UM)** | Artificial Intelligence | [Perception, evaluation and AI evidence](portfolio/programs/um-artificial-intelligence.md) |
+| **CUHK-Shenzhen** | Computer Science | [Algorithms and software-engineering foundations](portfolio/programs/cuhksz-computer-science.md) |
+| **CUHK-Shenzhen** | Artificial Intelligence · Agentic AI direction | [Decision-making, systems and agent-evaluation foundations](portfolio/programs/cuhksz-ai-agentic-ai.md) |
+| **HKUST (Guangzhou)** | Data-Centric Artificial Intelligence Technology | [Data quality, model evaluation and deployment constraints](portfolio/programs/hkustgz-data-centric-ai.md) |
 
 Or browse one of the three broader paths:
 
